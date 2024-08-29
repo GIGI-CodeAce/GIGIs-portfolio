@@ -1,12 +1,19 @@
+nav{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  border: 3px solid white;
+  width: 100%;
+}
 
 ul li{
   text-align: center;
-  width: 90px;
+  width: 111px;
   padding: 0px 5px;
-  color: white;
   border-left: 1px solid white;
+  color: black;
 }
-
 ul {
   padding: 0;
   margin: 0;
@@ -14,16 +21,23 @@ ul {
   display: flex;
   align-items: center;
   user-select: none;
-  border: 5px solid white;
 }
-
+ul a{
+  text-decoration: none;
+  color: black;
+}
 ul li:hover{
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 5px;
 }
-
-ul li:first-child {
+ul li:last-child{
+  color: whitesmoke;
+}
+ul a:first-child {
   width: 110px;
   margin-right: auto;
+}
+#gitHub-redirect{
+  text-decoration: none;
 }

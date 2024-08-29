@@ -19,4 +19,138 @@
         height: 100vh;
         width: 100vw;
     }
+    body #welcome{
+        text-align: center;
+        margin: 40px 0px;
+    }
+}
+@media (max-width: 120px){
+    #me{
+        font-size: 20px;
+    }
+}
+@media (max-width: 560px){
+    #me{
+        font-size: 20px;
+    }
+    ul li{
+        width: 102px;
+    }
+    .Recources img{
+        width: 35px;
+    }
+}
+@media (max-width: 800px) {
+    #video{
+        margin: 20px 10px 20px 10px;
+    }
+    .moreAbout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .litteTalk, .vidContainer {
+        width: 100%;
+        margin: 0;
+    }
+
+    .litteTalk {
+        text-align: center;
+        margin: 0 0 20px 0;
+        line-height: normal;
+    }
+
+    .vidContainer {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+/* Warning popup */
+
+main{
+    color: black;
+}
+.popup-container {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 10px;
+    width: 310px;
+    height: 300px;
+    border: 4px solid hsla(0, 0%, 100%, 0.3);
+    border-style: dashed;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1001;
+}
+
+.popup-container p,
+.popup-container h1,
+.popup-container div{
+    background-color: hsla(0, 0%, 100%, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+}
+.blur{
+    position: fixed;
+    width: 1000%;
+    height: 1000%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+.mobileVisitBtn{
+        width: 150px;
+        border-radius: 5px;
+        border-style: groove;
+        font-size: 15px;
+        background-color: hsla(0, 0%, 100%, 0.3);
+
+        transition: border-radius 0.3s ease;
+    }
+    .mobileVisitBtn:hover {
+        cursor: pointer;
+        border-radius: 15px;
+    }
+    
+    .mobileVisitBtn:active {
+        color: hsl(0, 0%, 40%);
+        border-style: dashed;
+        opacity: 0.5;
+    }
+.howTo{
+    margin-top: 10px;
+    line-height: 1px;
+}
+.howTo p{
+    font-family: 'Comic Neue',  'Luckiest Guy', cursive;
+}
+u{
+    background-color:hsl(0, 0%, 13%);
+padding: 2px;
+
+}
+.howToPlay{
+    background-color: hsl(0, 0%, 10%);
+}
+#exit-settings{
+    position: absolute;
+    left: 89.5%;
+    top: 8%;
+    padding: 7px 11px 7px 11px;
+    float: right;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 80%);
+    border: 1px solid black;
+    color: black
+}
+#exit-settings:active{
+  background-color: hsl(284, 35%, 15%);
+}
+#exit-settings:hover{
+    color: hsl(0, 0%, 70%)
 }

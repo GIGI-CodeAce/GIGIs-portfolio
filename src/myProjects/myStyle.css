@@ -3,7 +3,11 @@
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
 }
-#blahBlah{
+.projects--category:hover{
+    border-style: dashed;
+    border-radius: 10px;
+}
+#myProjects{
     transition: color 0.5s ease-in-out;
 }
 
@@ -11,13 +15,17 @@
     text-align: center;
     margin: 10px;
 }
-
-.projectImage {
-    width: 210px;
-    height: 210px;
-    border-radius: 10px;
-    padding: 5px;
+.imgContainer{
     border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 0px;
+}
+.projectImage {
+
+    width: 200px;
+    height: 210px ;
+    background-repeat: no-repeat;
+
 }
 
 .project {
@@ -26,7 +34,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
 
@@ -37,15 +44,21 @@
 .project-item {
     flex: 1 1 calc(25% - 2000px);
     padding: 10px;
-    max-width: 380px;
+    min-width: 300px;
     height: 400px;
     border: 5px solid white;
     box-sizing: border-box;
-    transition: height 0.3s ease, transform 0.3s ease;
-    transition: border-radius 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    transition: 
+    height 0.3s ease,
+    transform 0.3s ease,
+    border-radius 0.3s ease,
+    border-style 0.3s ease
 
 }
 .project-item:hover{
+    border-style: dashed;
     border-radius: 10px;
 }
 .project-item:hover .projectImage{
@@ -87,16 +100,56 @@
         border-radius 0.3s ease, 
         transform 0.3s ease, 
         background-color 0.3s ease-in-out, 
-        color 0.5s ease-in-out;
+        color 0.1s ease
 }
 
 .visitBtn:hover {
     cursor: pointer;
     border-radius: 15px;
+    color: hsl(222, 100%, 60%);
 }
 
 .visitBtn:active {
-    color: hsl(120, 100%, 35%);
+    color: hsl(120, 100%, 40%);
     border-style: dashed;
     opacity: 0.5;
+}
+.imgContainer {
+    position: relative;
+    /* Ensure this container is wide enough to hold all elements */
+    width: 100%; /* or any specific width */
+}
+
+.phone {
+    background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/computer.png');
+    top: 10px; 
+    right: 5px; 
+}
+
+.computer {
+    background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/phone.png');
+    top: 45px; 
+    right: 5px; 
+}
+
+.git {
+    background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/github.png');
+    top: 10px; /* Adjust this based on where you want it */
+    left: 5px; /* Align with other icons */
+}
+
+.phone, .computer, .git {
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: hsla(0, 0%, 20%, 0.481);
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.phone:hover, .computer:hover, .git:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 10%);
+    padding: 1px;
 }

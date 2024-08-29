@@ -51,6 +51,16 @@ function Header() {
           <h1 id="welcome" className={`darkSwitchColor ${isStyleActive ? 'active' : ''}`}>
         Welcome{specialCharacters}
       </h1>
+      <div className='moreAbout'>
+        <div className='litteTalk'>
+          <b> <span id='me' className='darkSwitchColor'>A highly passionate web Developer.</span><br/>
+          <span id='me' className='darkSwitchColor'>Dobre Robert</span></b><br/>
+          <span align="left"> <a href="https://www.w3schools.com/css/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/> </a> <a href="https://www.w3.org/html/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"/> </a> <a href="https://reactjs.org/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react"/> </a> </span>
+        </div>
+        <div className='vidContainer'>
+        <iframe id="video" src="https://www.youtube.com/embed/njX2bu-_Vw4" allowfullscreen/>
+        </div>
+      </div>
         <style>{`
           .darkSwitchColor {
             color: ${color};

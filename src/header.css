@@ -5,6 +5,9 @@ body, html {
     color: white;
     overflow-x: hidden;
 }
+#me{
+  transition: color 0.5s ease-in-out;
+}
 
 .video-background {
     position: fixed;
@@ -28,5 +31,51 @@ main {
 }
 #welcome{
     font-size: 40px;
-    margin-left: 20px;
+    margin: 40px 20px;
 }
+#video {
+    width: 100%;
+    max-width: 580px;
+    min-width: 300px;
+    min-height: 150px;
+    height: auto; 
+    aspect-ratio: 16 / 9;
+    margin: 20px 10px 20px 0px;
+    border-radius: 10px;
+    border: none;
+}
+.moreAbout {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    border: 5px solid white;
+    border-top: none;
+  }
+  .moreAbout:hover{
+    border: 5px dashed white;
+    border-radius: 10px;
+    border-top: none;
+  }
+  
+  .litteTalk, .vidContainer {
+    flex: 1;
+    width: 50%;
+  }
+  
+  .litteTalk {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  
+  .vidContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .Recources img{
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+  }
