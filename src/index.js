@@ -19,9 +19,11 @@ root.render(
         <img src='https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/bgGif.gif' alt="Background" />
         </div>
       )}
+      <div className='opacity'>
       <NavBar />
       <Header />
       <MyProjects />
       <CourceProjects />
+      </div>
     </>
   );
