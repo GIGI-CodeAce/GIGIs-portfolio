@@ -39,10 +39,10 @@ function Header() {
       }, 500);
     };
 
-    document.addEventListener('click', handleClick);
+    document.addEventListener('dblclick', handleClick);
 
     return () => {
-      document.removeEventListener('click', handleClick);
+      document.removeEventListener('dblclick', handleClick);
     };
   }, []);
 

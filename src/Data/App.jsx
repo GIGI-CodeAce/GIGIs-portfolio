@@ -5,18 +5,18 @@ function App(props) {
 
     function WarningPop({ onClose }) {
         return (
-            <main>
-                <div className='blur'></div>
-                <section className='popup-container'>
-                    <button onClick={onClose} id="exit-settings">X</button>
-                    <p>Warning</p>
-                    <p>You appear o be on a mobile device</p>
-                    <p>The website you are trying to access does not meet the recommended requirements for mobile
-                         devices. As a result, some UI elements and controls may not work as intended.</p>
-                         <br/>
-                    <button className='mobileVisitBtn' onClick={() => window.open(props.link, '_blank')}>Visit anyway</button>
-                </section>
-            </main>
+        <main>
+            <div className='blur'></div>
+            <section className='popup-container'>
+                <button onClick={onClose} id="exit-settings">X</button>
+                <p>Warning</p>
+                <p>You appear to be on a mobile device.</p>
+                <p>The website you are trying to access does not meet the recommended requirements for mobile
+                    devices. As a result, some UI elements and controls may not work as intended.</p>
+                <br/>
+                <button className='mobileVisitBtn' onClick={() => window.open(props.link, '_blank')}>Visit anyway</button>
+            </section>
+        </main>
         );
     }
 

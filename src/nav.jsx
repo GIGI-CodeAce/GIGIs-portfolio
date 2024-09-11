@@ -14,12 +14,12 @@ function NavBar() {
     return (
         <nav>
             <ul className="darkSwitchColor darkSwitchBack">
-                <a href="https://github.com/GIGI-CodeAce" target="_blank" id="gitHub-redirect">
-                    <li>GIGI-CodeAce</li>
+                <a href="https://github.com/GIGI-CodeAce" target="_blank">
+                    <li id="gitHub-redirect">GIGI-CodeAce</li>
                 </a>
-                <li><a href="#welcome" onClick={(e) => scrollToSection(e, 'welcome')}>Home</a></li>
-                <li><a href="#myProjects" onClick={(e) => scrollToSection(e, 'myProjects')}>My apps</a></li>
-                <li><a href="#courseApps" onClick={(e) => scrollToSection(e, 'courseApps')}>Course Apps</a></li>
+                <a href="#welcome" onClick={(e) => scrollToSection(e, 'welcome')}><li>Home</li></a>
+                <a href="#myProjects" onClick={(e) => scrollToSection(e, 'myProjects')}><li>My apps</li></a>
+                <a href="#courseApps" onClick={(e) => scrollToSection(e, 'courseApps')}><li>Course Apps</li></a>
             </ul>
         </nav>
     );

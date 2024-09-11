@@ -2,10 +2,14 @@
     border: 5px solid white;
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
+    backdrop-filter: blur(1px);
+
+    transition: height 0.3s ease;
 }
 .projects--category:hover{
     border-style: dashed;
     border-radius: 10px;
+
 }
 #myProjects{
     transition: color 0.5s ease-in-out;
@@ -27,7 +31,6 @@
     background-repeat: no-repeat;
 
 }
-
 .project {
     text-align: center;
     width: 100%;
@@ -35,10 +38,7 @@
     flex-wrap: wrap;
     gap: 10px;
     border-radius: 10px;
-}
-
-.description:hover{
-    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .project-item {
@@ -49,6 +49,7 @@
     border: 5px solid white;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
 
     transition: 
     height 0.3s ease,
@@ -116,8 +117,7 @@
 }
 .imgContainer {
     position: relative;
-    /* Ensure this container is wide enough to hold all elements */
-    width: 100%; /* or any specific width */
+    width: 100%;
 }
 
 .phone {
@@ -134,8 +134,8 @@
 
 .git {
     background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/github.png');
-    top: 10px; /* Adjust this based on where you want it */
-    left: 5px; /* Align with other icons */
+    top: 10px; 
+    left: 5px; 
 }
 
 .phone, .computer, .git {

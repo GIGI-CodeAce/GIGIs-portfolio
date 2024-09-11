@@ -1,10 +1,10 @@
 import React from 'react';
 import './myStyle.css';
 import App from '../Data/App.jsx';
-import AppData from '../Data/appData.js';
+import {MyProjectsData} from '../Data/appData.js';
 
 function MyProjects() {
-    let Apps = AppData();
+    let Apps = MyProjectsData();
 
     return (
         <>
