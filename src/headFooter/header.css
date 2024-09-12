@@ -41,8 +41,14 @@ main {
     height: auto; 
     aspect-ratio: 16 / 9;
     margin: 20px 10px 20px 0px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
+    border: 2px solid rgba(255, 255, 255, 0);
+
+    transition: border 0.3s ease;
+}
+#video:hover{
+  border: 2px solid white;
 }
 .moreAbout {
   display: flex;

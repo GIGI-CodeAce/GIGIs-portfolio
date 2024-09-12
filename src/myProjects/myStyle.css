@@ -70,6 +70,7 @@
 }
 .project-item:hover .description{
     overflow-y: auto;
+    text-overflow: clip;
 }
 
 @keyframes rotate-img {
@@ -89,7 +90,18 @@
     min-height: 35px;
     transition: max-height 0.3s ease;
 }
-
+.description {
+    font-size: 14px;
+    padding: 0px 10px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.2em;
+    min-height: 35px;
+    transition: max-height 0.3s ease;
+}
 
 .visitBtn {
     width: 150px;

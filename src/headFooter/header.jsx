@@ -58,7 +58,7 @@ function Header() {
           <span align="left"> <a href="https://www.w3schools.com/css/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/> </a> <a href="https://www.w3.org/html/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"/> </a> <a href="https://reactjs.org/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react"/> </a> </span>
         </div>
         <div className='vidContainer'>
-        <iframe id="video" src="https://www.youtube.com/embed/njX2bu-_Vw4" allowfullscreen/>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/T3e0iaCirdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
         <style>{`
