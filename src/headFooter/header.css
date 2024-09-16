@@ -4,6 +4,8 @@ body, html {
     height: 100%;
     color: white;
     overflow-x: hidden;
+
+    font-family: Poppins;
 }
 #me{
   transition: color 0.5s ease-in-out;

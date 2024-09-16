@@ -9,8 +9,9 @@ import Footer from './headFooter/footer.js'
 import './index.css';
 import './Mobile.css';
 
+import gifVid from './Data/bgGif.gif'
 const bgVid = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/bg.mp4";
-const gifVid = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/bgGif.gif"
+
 
 const VideoBackground = () => {
   const windowWidth = window.innerWidth;
