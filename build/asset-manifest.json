@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/GIGIs-portfolio/static/css/main.4058392d.css",
+    "main.js": "/GIGIs-portfolio/static/js/main.2ce15e60.js",
+    "static/media/bgGif.gif": "/GIGIs-portfolio/static/media/bgGif.ef63bcd79ef03bd379db.gif",
+    "index.html": "/GIGIs-portfolio/index.html",
+    "main.4058392d.css.map": "/GIGIs-portfolio/static/css/main.4058392d.css.map",
+    "main.2ce15e60.js.map": "/GIGIs-portfolio/static/js/main.2ce15e60.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4058392d.css",
+    "static/js/main.2ce15e60.js"
+  ]
+}
