@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/GIGIs-portfolio/static/css/main.16422da7.css",
-    "main.js": "/GIGIs-portfolio/static/js/main.ccc1c351.js",
-    "index.html": "/GIGIs-portfolio/index.html",
-    "main.16422da7.css.map": "/GIGIs-portfolio/static/css/main.16422da7.css.map",
-    "main.ccc1c351.js.map": "/GIGIs-portfolio/static/js/main.ccc1c351.js.map"
+    "main.css": "/static/css/main.16422da7.css",
+    "main.js": "/static/js/main.ccc1c351.js",
+    "index.html": "/index.html",
+    "main.16422da7.css.map": "/static/css/main.16422da7.css.map",
+    "main.ccc1c351.js.map": "/static/js/main.ccc1c351.js.map"
   },
   "entrypoints": [
     "static/css/main.16422da7.css",
