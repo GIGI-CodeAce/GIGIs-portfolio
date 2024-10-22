@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/GIGIs-portfolio/static/css/main.29c1037c.css",
-    "main.js": "/GIGIs-portfolio/static/js/main.6b0d730b.js",
+    "main.css": "/GIGIs-portfolio/static/css/main.16422da7.css",
+    "main.js": "/GIGIs-portfolio/static/js/main.aeb64a21.js",
     "index.html": "/GIGIs-portfolio/index.html",
-    "main.29c1037c.css.map": "/GIGIs-portfolio/static/css/main.29c1037c.css.map",
-    "main.6b0d730b.js.map": "/GIGIs-portfolio/static/js/main.6b0d730b.js.map"
+    "main.16422da7.css.map": "/GIGIs-portfolio/static/css/main.16422da7.css.map",
+    "main.aeb64a21.js.map": "/GIGIs-portfolio/static/js/main.aeb64a21.js.map"
   },
   "entrypoints": [
-    "static/css/main.29c1037c.css",
-    "static/js/main.6b0d730b.js"
+    "static/css/main.16422da7.css",
+    "static/js/main.aeb64a21.js"
   ]
 }
