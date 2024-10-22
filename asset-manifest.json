@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/GIGIs-portfolio/static/css/main.16422da7.css",
-    "main.js": "/GIGIs-portfolio/static/js/main.aeb64a21.js",
+    "main.js": "/GIGIs-portfolio/static/js/main.ccc1c351.js",
     "index.html": "/GIGIs-portfolio/index.html",
     "main.16422da7.css.map": "/GIGIs-portfolio/static/css/main.16422da7.css.map",
-    "main.aeb64a21.js.map": "/GIGIs-portfolio/static/js/main.aeb64a21.js.map"
+    "main.ccc1c351.js.map": "/GIGIs-portfolio/static/js/main.ccc1c351.js.map"
   },
   "entrypoints": [
     "static/css/main.16422da7.css",
-    "static/js/main.aeb64a21.js"
+    "static/js/main.ccc1c351.js"
   ]
 }
