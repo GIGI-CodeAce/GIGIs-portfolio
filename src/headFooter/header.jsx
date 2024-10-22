@@ -46,16 +46,36 @@ function Header() {
     };
   }, []);
 
+  const [bgSwitch,setBgSwitch] = useState('on')
+  function bgToggle(){
+    if (bgSwitch === 'on') {
+      setBgSwitch('off');
+    } else {
+      setBgSwitch('on');
+    }
+  }
+
   return (
     <>
-          <h1 id="welcome" className={`darkSwitchColor ${isStyleActive ? 'active' : ''}`}>
-        Welcome{specialCharacters}
-      </h1>
+<header className="header-container">
+  <h1 id="welcome" className={`darkSwitchColor ${isStyleActive ? 'active' : ''}`}>
+    Welcome{specialCharacters}
+  </h1>
+  <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
+    <div className="switch"></div>
+  </div>
+</header>
       <div className='moreAbout'>
         <div className='litteTalk'>
           <b> <span id='me' className='darkSwitchColor'>A highly passionate web Developer.</span><br/>
           <span id='me' className='darkSwitchColor'>Dobre Robert</span></b><br/>
-          <span align="left"> <a href="https://www.w3schools.com/css/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/> </a> <a href="https://www.w3.org/html/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"/> </a> <a href="https://reactjs.org/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react"/> </a> </span>
+          <span align="left"> 
+           <a href="https://www.w3schools.com/css/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/> </a> <a href="https://www.w3.org/html/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"/> </a>
+           <a href="https://reactjs.org/" target="_blank" class='Recources' rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react"/> </a> <a href="https://tailwindcss.com" target="_blank" class='Recources' rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="react"/> </a>
+           </span><br/>
+           <a href="/resume.pdf" download="resume.pdf">
+            <button id="resume">CURRENT RESUME</button>
+      </a>
         </div>
         <div className='vidContainer'>
         <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/T3e0iaCirdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

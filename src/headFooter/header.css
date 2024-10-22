@@ -73,7 +73,7 @@ main {
   .litteTalk {
     margin-top: 30px;
     text-align: center;
-    line-height: 80px;
+    line-height: 60px;
     font-size: 30px;
     padding-right: 20px;
   }
@@ -86,4 +86,66 @@ main {
     margin-top: 10px;
     width: 45px;
     height: 45px;
+  }
+  #resume{
+    border-radius: 50px;
+    border: 4px solid white;
+    cursor: pointer;
+    background: rgba(245, 245, 245, 0.250);
+    padding: 10px 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  #resume:hover{
+    border-style: dashed;
+  }
+  #resume:active{
+    border-color: black;
+    color: black;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers both the text and the switch */
+    padding: 10px; /* Optional padding for spacing */
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust the font size if needed */
+  }
+  
+  .bg-slider {
+    position: relative;
+    background-color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+  
+  .bg-slider .switch {
+    position: absolute;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid black;
+    transition: left 0.5s ease;
+  }
+  
+  .bg-slider.on {
+    background-color: black;
+  }
+  
+  .bg-slider.on .switch {
+    left: 33px;
+  }
+  
+  .bg-slider.off .switch {
+    left: 2px;
   }

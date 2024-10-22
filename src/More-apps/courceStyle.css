@@ -4,6 +4,14 @@
   margin: 0 auto;
   padding: 15px 0px 15px 0px;
 }
+#more{
+    border: 3px dotted white;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 50%;
+    width: 80%;
+    max-width: 500px;
+}
 .courceInfo{
   position: absolute;
   width: 20px;

@@ -18,8 +18,8 @@ function NavBar() {
                     <li id="gitHub-redirect">GIGI-CodeAce</li>
                 </a>
                 <a href="#welcome" onClick={(e) => scrollToSection(e, 'welcome')}><li>Home</li></a>
-                <a href="#myProjects" onClick={(e) => scrollToSection(e, 'myProjects')}><li>My apps</li></a>
-                <a href="#courseApps" onClick={(e) => scrollToSection(e, 'courseApps')}><li>Course Apps</li></a>
+                <a href="#myProjects" onClick={(e) => scrollToSection(e, 'myProjects')}><li>Main apps</li></a>
+                <a href="#more" onClick={(e) => scrollToSection(e, 'more')}><li>More</li></a>
             </ul>
         </nav>
     );

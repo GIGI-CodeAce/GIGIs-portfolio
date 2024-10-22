@@ -2,14 +2,17 @@ import React from 'react';
 import './myStyle.css';
 import App from '../Data/App.jsx';
 import {MyProjectsData} from '../Data/appData.js';
+import Slider from '../slideHeader/slider.js';
 
 function MyProjects() {
     let Apps = MyProjectsData();
 
     return (
         <>
+            <Slider
+            />
             <div className='projects--category darkSwitchBack darkSwitchBorder darkSwitchColor'>
-                <h2 id='myProjects'>My projects</h2>
+                <h2 id='myProjects'>Main projects</h2>
             </div>
 
             <div className='project darkSwitchColor'>

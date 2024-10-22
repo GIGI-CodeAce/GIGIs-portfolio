@@ -38,26 +38,26 @@ function App(props) {
         setShowWarning(false);
     };
 
-    return (
+  return (
         <>
-            <div className='App'>
+    <div className='App'>
             {showWarning && <WarningPop onClose={closeWarningPop} />}
-                <div className='imgContainer'>
+      <div className='imgContainer'>
                     <img className='projectImage' src={props.img} alt="Project"/>
                     {props.mobile && <abbr title="Mobile support"><div className="computer"></div></abbr>}
                     <abbr title="Computer support"><div className="phone"></div></abbr>
                     <a href={props.repo} target="_blank" rel="noopener noreferrer">
                         <abbr title="Github repo"><div className="git"></div></abbr>
-                    </a>
-                </div>
-                <h3 className='projectTitle'>{props.title}</h3>
-                <div className='description-container'>
-                    <p className='description'>{props.desc}</p>
-                </div>
+        </a>
+      </div>
+      <h3 className='projectTitle'>{props.title}</h3>
+      <div className='description-container'>
+        <p className='description'>{props.desc}</p>
+      </div>
                 <button className='visitBtn' onClick={handleButtonClick}>▶</button>
-            </div>
+    </div>
         </>
-    );
+  );
 }
 
 export default App;

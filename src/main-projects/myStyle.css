@@ -11,9 +11,13 @@
 
 }
 #myProjects{
-    transition: color 0.5s ease-in-out;
+        border: 3px dotted white;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 50%;
+        width: 80%;
+        max-width: 500px;
 }
-
 .projectTitle {
     text-align: center;
     margin: 10px;
