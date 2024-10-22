@@ -80,9 +80,9 @@ function Header({bgToggle, bgSwitch}) {
               <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="react" />
             </a>
           </span><br/>
-          <a href="/resume.pdf" download="resume.pdf">
-            <button id="resume">CURRENT RESUME</button>
-          </a>
+          <a href={`https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf`} download="resume.pdf">
+         <button id="resume">CURRENT RESUME</button>
+        </a>
         </div>
         <div className='vidContainer'>
           <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/T3e0iaCirdI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
