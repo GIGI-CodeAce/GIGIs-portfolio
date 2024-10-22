@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './headFooter/header.jsx';
 import NavBar from './nav';
@@ -29,16 +29,33 @@ const VideoBackground = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <>
-    <VideoBackground />
-    <Welcome />
-    <div className='opacity'>
-      <NavBar />
-      <Header />
-      <MyProjects />
-      <CourceProjects />
-      <Footer />
-    </div>
-  </>
-);
+
+function App() {
+  const [bgSwitch, setBgSwitch] = useState(() => {
+    const savedBgSwitch = localStorage.getItem('bgSwitch');
+    return savedBgSwitch ? savedBgSwitch : 'on';
+  });
+
+  function bgToggle() {
+    const newSwitchState = bgSwitch === 'on' ? 'off' : 'on';
+    setBgSwitch(newSwitchState);
+
+    localStorage.setItem('bgSwitch', newSwitchState);
+  }
+
+  return (
+    <>
+      {bgSwitch === 'on' && <VideoBackground />}
+      <Welcome />
+      <div className='opacity'>
+        <NavBar />
+        <Header bgToggle={bgToggle} bgSwitch={bgSwitch} />
+        <MyProjects />
+        <CourceProjects />
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+root.render(<App />);

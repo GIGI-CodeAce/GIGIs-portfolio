@@ -7,6 +7,9 @@ body, html {
 
     font-family: Poppins;
 }
+h5{
+  text-align: center;
+}
 #me{
   transition: color 0.5s ease-in-out;
 }
@@ -108,13 +111,13 @@ main {
   .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertically centers both the text and the switch */
-    padding: 10px; /* Optional padding for spacing */
+    align-items: center;
+    padding: 10px;
   }
   
   h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 24px; /* Adjust the font size if needed */
+    margin: 0;
+    font-size: 24px;
   }
   
   .bg-slider {
@@ -125,6 +128,7 @@ main {
     border-radius: 60px;
     cursor: pointer;
     transition: background-color 0.5s ease;
+    user-select: none;
   }
   
   .bg-slider .switch {
