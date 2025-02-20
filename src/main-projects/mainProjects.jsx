@@ -1,5 +1,5 @@
 import React from 'react';
-import './myStyle.css';
+import './mainStyle.css';
 import App from '../Data/App.jsx';
 import {MyProjectsData} from '../Data/appData.js';
 import Slider from '../slideHeader/slider.js';
@@ -11,20 +11,15 @@ function MyProjects() {
         <>
             <Slider
             />
-            <div className='projects--category darkSwitchBack darkSwitchBorder darkSwitchColor'>
+            <div className='projects--category main darkSwitchBack darkSwitchBorder darkSwitchColor'>
                 <h2 id='myProjects'>Main projects</h2>
             </div>
 
             <div className='project darkSwitchColor'>
                 {Apps.map((item) => (
-                    <div className='project-item darkSwitchBack darkSwitchBorder' key={item.id}>
+                    <div className='project-item project-item-main darkSwitchBack darkSwitchBorder' key={item.id}>
                         <App
-                            img={item.img}
-                            title={item.title}
-                            desc={item.desc}
-                            link={item.link}
-                            repo={item.repo}
-                            mobile={item.mobile}
+                        {...item}
                         />
                     </div>
                 ))}

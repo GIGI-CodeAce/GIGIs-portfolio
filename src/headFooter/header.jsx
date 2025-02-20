@@ -64,21 +64,27 @@ function Header({bgToggle, bgSwitch}) {
             <span id='me' className='darkSwitchColor'>Dobre Robert</span>
           </b><br/>
           <span align="left"> 
+          <a href="https://www.w3.org/html/" target="_blank" className='Recources' rel="noreferrer"> 
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" />
+            </a> 
             <a href="https://www.w3schools.com/css/" target="_blank" className='Recources' rel="noreferrer"> 
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" />
             </a> 
-            <a href="https://www.w3.org/html/" target="_blank" className='Recources' rel="noreferrer"> 
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" />
-            </a> 
+            <a href="https://sass-lang.com" target="_blank" className='Recources' rel="noreferrer"> 
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="react" />
+            </a>
+            <a href="https://tailwindcss.com" target="_blank" className='Recources' rel="noreferrer"> 
+              <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="react" />
+            </a>
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" className='Recources' rel="noreferrer"> 
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" />
+            </a>
+            <a href="https://www.typescriptlang.org/" target="_blank" className='Recources' rel="noreferrer"> 
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="react" />
             </a>
             <a href="https://reactjs.org/" target="_blank" className='Recources' rel="noreferrer"> 
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" />
             </a> 
-            <a href="https://tailwindcss.com" target="_blank" className='Recources' rel="noreferrer"> 
-              <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="react" />
-            </a>
           </span><br/>
           <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">
           <button id="resume">CURRENT RESUME</button>
@@ -97,7 +103,7 @@ function Header({bgToggle, bgSwitch}) {
         .darkSwitchBack {
           transition: background-color 0.5s ease-in-out;
         }
-
+          
         .visitBtn {
           color: ${color2};
           background-color: ${btnBack};

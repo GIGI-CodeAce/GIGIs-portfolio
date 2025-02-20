@@ -1,11 +1,11 @@
 import React from 'react';
-import './courceStyle.css';
+import './moreStyle.css';
 import App from '../Data/App.jsx';
-import { CourceProjectsData } from '../Data/appData.js';
+import { MoreProjectsData } from '../Data/appData.js';
 
-function CourceProjects() {
+function MoreProjects() {
 
-  let Apps = CourceProjectsData();
+  let Apps = MoreProjectsData();
 
   return (
     <>
@@ -17,12 +17,7 @@ function CourceProjects() {
         {Apps.map((item) => (
             <div className='project-item darkSwitchBack darkSwitchBorder'>
               <App
-                img={item.img}
-                title={item.title}
-                desc={item.desc}
-                link={item.link}
-                repo={item.repo}
-                mobile={item.mobile}
+              {...item}
               />
             </div>
         ))}
@@ -31,4 +26,4 @@ function CourceProjects() {
   );
 }
 
-export default CourceProjects;
+export default MoreProjects;

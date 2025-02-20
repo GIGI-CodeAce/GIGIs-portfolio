@@ -10,7 +10,7 @@ function Footer(){
         <>
         <footer>
             <div className="right-side">
-                <span><sub>1.2.5</sub> Thanks for visit</span>
+                <span><sub>1.3.0</sub> Thanks for visit</span>
             </div>
             <div className="left-side">
             <ul className="socials">
@@ -21,7 +21,7 @@ function Footer(){
         <a href='https://github.com/GIGI-CodeAce' target='_blank'>
         <li>Github <img className='redirect-icons' src={githubIcon}/></li>
         </a>
-        <a href='https://mail.google.com/mail/u/2/#inbox?compose=CllgCJTLHGFjKnxPBjNqmGGSKhhHFjgqdsdCzWzTnNTmFWtTfNkVVpbSPFxKkWLHqpXvhVvhspg' target='_blank'>
+        <a href='https://mail.google.com/mail/?view=cm&fs=1&to=gigicodeace@gmail.com&su=Inquiry&body=Hello,' target='_blank'>
         <li>Gmail <img className='redirect-icons' src={gmailIcon}/></li>
         </a>
     </ul>

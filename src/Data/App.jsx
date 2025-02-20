@@ -54,7 +54,7 @@ function App(props) {
       <div className='description-container'>
         <p className='description'>{props.desc}</p>
       </div>
-                <button className='visitBtn' onClick={handleButtonClick}>▶</button>
+        <button className='visitBtn' onClick={handleButtonClick}>▶</button>
     </div>
         </>
   );

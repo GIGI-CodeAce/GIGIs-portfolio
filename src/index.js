@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './headFooter/header.jsx';
 import NavBar from './nav';
-import MyProjects from './main-projects/myP.jsx';
-import CourceProjects from './More-apps/courceP.jsx';
+import MainProjects from './main-projects/mainProjects.jsx';
+import MoreProjects from './More-apps/moreProjects.jsx';
 import Welcome from './welcome.js';
 import Footer from './headFooter/footer.js';
 import './index.css';
@@ -50,8 +50,8 @@ function App() {
       <div className='opacity'>
         <NavBar />
         <Header bgToggle={bgToggle} bgSwitch={bgSwitch} />
-        <MyProjects />
-        <CourceProjects />
+        <MainProjects />
+        <MoreProjects />
         <Footer />
       </div>
     </>
