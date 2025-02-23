@@ -17,6 +17,7 @@ function MoreProjects() {
         {Apps.map((item) => (
             <div className='project-item darkSwitchBack darkSwitchBorder'>
               <App
+              key={item.id}
               {...item}
               />
             </div>

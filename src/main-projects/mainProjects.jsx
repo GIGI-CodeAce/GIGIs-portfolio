@@ -2,7 +2,7 @@ import React from 'react';
 import './mainStyle.css';
 import App from '../Data/App.jsx';
 import {MyProjectsData} from '../Data/appData.js';
-import Slider from '../slideHeader/slider.js';
+import Slider from '../slideHeader/slider.jsx';
 
 function MyProjects() {
     let Apps = MyProjectsData();
