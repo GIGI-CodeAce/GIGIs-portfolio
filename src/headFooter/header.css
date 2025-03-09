@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+
+    font-family: Poppins;
+}
+h5{
+  text-align: center;
+}
+#me{
+  transition: color 0.5s ease-in-out;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+#welcome{
+    font-size: 40px;
+    margin: 40px 20px;
+}
+#video {
+    width: 100%;
+    max-width: 580px;
+    min-width: 300px;
+    min-height: 150px;
+    height: auto; 
+    aspect-ratio: 16 / 9;
+    margin: 20px 10px 20px 0px;
+    border-radius: 15px;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, 0);
+
+    transition: border 0.3s ease;
+}
+#video:hover{
+  border: 2px solid white;
+}
+.moreAbout {
+  display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    border: 5px solid white;
+    border-top: none;
+  }
+  .moreAbout:hover{
+    border: 5px dashed white;
+    border-radius: 0px 0px 10px 10px;
+    border-top: none;
+  }
+  
+  .litteTalk, .vidContainer {
+    flex: 1;
+    width: 50%;
+  }
+  
+  .litteTalk {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  
+  .vidContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .Recources img{
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+  }
+  #resume{
+    border-radius: 50px;
+    border: 4px solid white;
+    cursor: pointer;
+    background: rgba(245, 245, 245, 0.250);
+    padding: 10px 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  #resume:hover{
+    border-style: dashed;
+  }
+  #resume:active{
+    border-color: black;
+    color: black;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .bg-slider {
+    position: relative;
+    background-color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    user-select: none;
+  }
+  
+  .bg-slider .switch {
+    position: absolute;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid black;
+    transition: left 0.5s ease;
+  }
+  
+  .bg-slider.on {
+    background-color: black;
+  }
+  
+  .bg-slider.on .switch {
+    left: 33px;
+  }
+  
+  .bg-slider.off .switch {
+    left: 2px;
+  }
