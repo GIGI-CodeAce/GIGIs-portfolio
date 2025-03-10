@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import "./welcome.css";
 
-function Welcome() {
+function Welcome({setDontShowAgain, dontShowAgain} ) {
     const [helloTrigger, setHelloTrigger] = useState(true);
     const [displaySite, setDisplaySite] = useState("none");
     const [siteOpacity, setSiteOpacity] = useState("0");
     const [animateHello, setAnimateHello] = useState(false);
     const [animateOpacity, setAnimateOpacity] = useState(false);
     const [greeting, setGreeting] = useState({ hi: "Hello", flag: "🇬🇧" });
+
+    console.log(dontShowAgain);
 
     const greetings = {
         en: { hi: "Hello", morning: "Good morning", afternoon: "Good afternoon", evening: "Good evening", flag: "🇬🇧" },
@@ -64,6 +66,13 @@ function Welcome() {
         }, 100);
     }
 
+
+    function handleDontShow() {
+        setTimeout(() => {
+          setDontShowAgain(true);
+        }, 1500);
+      }
+
     useEffect(() => {
         if (animateHello) {
             setDisplaySite("block");
@@ -86,6 +95,7 @@ function Welcome() {
                         </h2>
                         <h2>👋</h2>
                         <h2 id="continueMsg">Click anywhere to continue</h2>
+                        <h2 onClick={handleDontShow} id="dontShow">Dont show this again</h2>
                     </div>
                 </div>
             )}

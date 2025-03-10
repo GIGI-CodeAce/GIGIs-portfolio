@@ -10,12 +10,12 @@ function Footer(){
         <>
         <footer>
             <div className="right-side">
-                <span><sub>v1.3.1</sub> Thanks for visit</span>
+                <span><sub>v1.4.0</sub> Thanks for visit</span>
             </div>
             <div className="left-side">
             <ul className="socials">
 
-        <a href='https://www.linkedin.com/in/dobre-robert-03653b331/' target='_blank'>
+        <a href='https://www.linkedin.com/in/dobre-robert/' target='_blank'>
         <li>LinkedIn <img className='redirect-icons' src={linkedInIcon}/></li>
         </a>
         <a href='https://github.com/GIGI-CodeAce' target='_blank'>

@@ -30,6 +30,7 @@
 .imgContainer{
     border: 1px solid black;
     border-radius: 10px;
+    border-style: dashed;
     padding: 5px 0px;
 }
 .projectImage {
@@ -47,6 +48,13 @@
     gap: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.imgContainer{
+    border: 1px solid black;
+    border-radius: 10px;
+    border-style: dashed;
+    padding: 5px 0px;
 }
 
 .project-item {
@@ -109,6 +117,11 @@
 .project-item-main:nth-child(2) .visitBtn
 {
 width: 200px;
+}
+.project-item-main:nth-child(1) .imgContainer,
+.project-item-main:nth-child(2) .imgContainer{
+    border: 1px solid hsl(60, 100%, 80%);
+    border-style: dashed;
 }
 
 .visitBtn {

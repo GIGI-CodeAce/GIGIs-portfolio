@@ -1,0 +1,21 @@
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+main{
+    color: white;
+    background-color:rgba(0, 0, 0, 0.8) ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 75%;
+    text-align: start;
+    border-radius: 50px;
+    border: 2px solid white;
+
+    z-index: 100;
+}

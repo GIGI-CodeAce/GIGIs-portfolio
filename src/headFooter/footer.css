@@ -3,7 +3,8 @@ footer {
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(2px);
-    border-top: 2px solid black; ;
+    border-top: 2px solid black;
+    border-style: dashed;
     border-radius: 20px 20px 0px 0px;
     padding: 20px;
 }
@@ -16,6 +17,9 @@ footer ul {
 .right-side {
     display: flex;
     align-items: center;
+}
+.right-side:hover{
+  text-decoration: underline dotted;
 }
 
 a {

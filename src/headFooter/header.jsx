@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SkillsUI from '../SkillsUI';
 import './header.css';
 
 function Header({bgToggle, bgSwitch}) {
@@ -15,6 +16,11 @@ function Header({bgToggle, bgSwitch}) {
   const [color2, setColor2] = useState('black');
   const [backColor, setBackColor] = useState('');
   const [btnBack, setBtnBack] = useState('');
+  const [openSkills, setOpenSkills] = useState(false)
+
+  function HandleClick(){
+    setOpenSkills((old)=> !old)
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -86,9 +92,12 @@ function Header({bgToggle, bgSwitch}) {
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" />
             </a> 
           </span><br/>
+          <div className='skillInfo'>
           <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">
-          <button id="resume">CURRENT RESUME</button>
+          <button className="resume">my resume</button>
             </a>
+          <button onClick={HandleClick} className="resume">full skills</button>
+          </div>
         </div>
         <div className='vidContainer'>
           <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/T3e0iaCirdI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -109,6 +118,7 @@ function Header({bgToggle, bgSwitch}) {
           background-color: ${btnBack};
         }
       `}</style>
+      <SkillsUI skillsOpen={openSkills}/>
     </>
   );
 }

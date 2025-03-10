@@ -90,9 +90,10 @@ main {
     width: 45px;
     height: 45px;
   }
-  #resume{
+  .resume{
     border-radius: 50px;
     border: 4px solid white;
+    text-transform: uppercase;
     cursor: pointer;
     background: rgba(245, 245, 245, 0.250);
     padding: 10px 30px;
@@ -100,10 +101,10 @@ main {
     font-weight: 600;
     font-size: 15px;
   }
-  #resume:hover{
+  .resume:hover{
     border-style: dashed;
   }
-  #resume:active{
+  .resume:active{
     border-color: black;
     color: black;
   }

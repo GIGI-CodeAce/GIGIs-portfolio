@@ -21,8 +21,25 @@
     opacity: 0.5;
     font-size: 20px;
     
-    animation: shadeInf 2s infinite;
+    animation: shadeInf 2s infinite, shade 3s 1;
     }
+
+  #dontShow{
+    text-decoration: underline;
+    padding-top: 10px;
+    font-size: 15px;
+    opacity: 0.250;
+    cursor: pointer;
+    width: 300px;height: 40px;
+    margin: auto;
+
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  #dontShow:hover{
+    opacity: 0.5;
+    text-shadow: 2px 1px 1px black;
+  }
 
   .mainGreeting{
     font-size: 60px;

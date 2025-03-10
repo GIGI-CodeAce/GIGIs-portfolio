@@ -11,8 +11,15 @@ nav{
 nav ul li{
   text-align: center;
   width: 115px;
-  border-left: 1px solid white;
+  border-left: 2px solid white;
+  height: 24px;
   color: black;
+}
+nav ul li:hover{
+  cursor: pointer;
+  border: 2px solid black;
+  border-style: dashed;
+  border-radius: 5px;
 }
 nav ul {
   padding: 0;
@@ -22,15 +29,20 @@ nav ul {
   align-items: center;
   user-select: none;
 }
-nav ul li:hover{
-  cursor: pointer;
-  border: 2px solid black;
-  border-radius: 5px;
-}
 nav ul a:first-child {
-  width: 110px;
+  padding: 0 2px 0 0;
+  border-right: 1px solid white ;
   margin-right: auto;
 }
 #gitHub-redirect{
   color: white;
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  nav{
+    height: 30px;
+  }
+  nav ul li{
+    padding-top: 5px;
+  }
 }
