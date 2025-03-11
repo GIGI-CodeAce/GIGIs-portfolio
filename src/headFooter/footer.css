@@ -6,6 +6,7 @@ footer {
     border-top: 2px solid black;
     border-style: dashed;
     border-radius: 20px 20px 0px 0px;
+    border-bottom: none;
     padding: 20px;
 }
 
