@@ -30,7 +30,7 @@
     font-size: 15px;
     opacity: 0.250;
     cursor: pointer;
-    width: 300px;height: 40px;
+    width: 200px;height: 40px;
     margin: auto;
 
     transition: color 0.3s ease, opacity 0.3s ease;

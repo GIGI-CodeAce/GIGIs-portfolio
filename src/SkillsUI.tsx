@@ -8,16 +8,16 @@ function SkillsUI({ skillsOpen }: SkillsUIProps) {
     return (
         <>
             {skillsOpen && (
-                <main>
-                    <ul className="list">
-                        <li className="skill">HTML</li>
-                        <li className="skill">CSS</li>
-                        <li className="skill">SCSS</li>
-                        <li className="skill">TAILWINDCSS</li>
-                        <li className="skill">JAVASCRIPT</li>
-                        <li className="skill">TYPESCRIPT</li>
+                <div className="skills-container">
+                    <ul className="skills-list">
+                        <li className="skill-item">HTML</li>
+                        <li className="skill-item">CSS</li>
+                        <li className="skill-item">SCSS</li>
+                        <li className="skill-item">TAILWINDCSS</li>
+                        <li className="skill-item">JAVASCRIPT</li>
+                        <li className="skill-item">TYPESCRIPT</li>
                     </ul>
-                </main>
+                </div>
             )}
         </>
     );
