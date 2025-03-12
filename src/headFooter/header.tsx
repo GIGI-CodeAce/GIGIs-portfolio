@@ -7,7 +7,8 @@ interface HeaderProps {
   bgSwitch: string;
 }
 
-const specialArray: string[] = ["!", "!!", "?", "??", "" , "Umm", "Friend", "Innovator", "Visitor", "Developer", "Passionate"];
+const specialArray: string[] = ["!", "!!", "?", "??", "" , "Umm", "Friend", "Innovator",
+                              "Visitor", "Developer", "Passionate", "User", "Traveler"];
 
 const getRandomItemFromArray = (array: string[]): string => {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -31,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     const interval = setInterval(() => {
       setSpecialCharacters(getRandomItemFromArray(specialArray));
       setGlitch(Math.random() > 0.7);
-    }, 1200);
+    }, 1300);
 
     return () => clearInterval(interval);
   }, []);
@@ -75,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
         <div className="litteTalk">
           <b>
             <span id="me" className="darkSwitchColor">
-              A highly passionate web Developer.
+              A passionate web Developer.
             </span>
             <br />
             <span id="me" className="darkSwitchColor">Dobre Robert</span>
@@ -83,20 +84,21 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           <br />
           <div className="tech-icons">
             {[
-              { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg", alt: "HTML5" },
-              { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg", alt: "CSS3" },
-              { link: "https://sass-lang.com", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg", alt: "SASS" },
-              { link: "https://tailwindcss.com", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", alt: "Tailwind" },
-              { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg", alt: "JavaScript" },
-              { link: "https://www.typescriptlang.org/", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg", alt: "TypeScript" },
-              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg", alt: "React" },
+               { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/html.png", alt: "HTML5" },
+               { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/css3.png", alt: "CSS3" },
+               { link: "https://sass-lang.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/sass.png", alt: "SASS" },
+              { link: "https://tailwindcss.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/tailwindcss.png", alt: "Tailwind" },
+              { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/javascript.png", alt: "JavaScript" },
+              { link: "https://www.typescriptlang.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/typescript.png", alt: "TypeScript" },
+              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/react.png", alt: "React" },
             ].map((tech, index) => (
-              <a key={index} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
+              <abbr title={tech.alt}>
+                <a key={index} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
                 <img src={tech.icon} alt={tech.alt} />
               </a>
+              </abbr>
             ))}
           </div>
-          <br />
           <div className="skillInfo">
             <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">
               <button className="resume">My Resume</button>
@@ -107,14 +109,13 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           </div>
         </div>
         <div className="vidContainer">
-          <iframe
-            id="video"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/T3e0iaCirdI"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/T3e0iaCirdI?mute=1"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
           ></iframe>
         </div>
       </div>
@@ -150,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
         }
       `}</style>
 
-      <SkillsUI skillsOpen={openSkills} />
+      <SkillsUI skillsOpen={openSkills} setSkillsOpen={setOpenSkills} />
     </>
   );
 };

@@ -143,6 +143,12 @@ u {
     }
 }
 
+@media only screen and (max-width: 500px) {
+    #welcome{
+      font-size: 33px;
+    }
+  }
+
 @media (min-width: 301px) and (max-width: 600px) {
     #me {
         font-size: 20px;
@@ -163,7 +169,8 @@ u {
     }
 
     .Recources img {
-        width: 35px;
+        width: 39px;
+        height: 39px;
     }
     .container .desc {
         font-size: 14px;

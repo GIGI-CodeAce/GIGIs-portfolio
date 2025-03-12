@@ -6,7 +6,6 @@ import MainProjects from "./main-projects/mainProjects";
 import MoreProjects from "./More-apps/moreProjects";
 import Welcome from "./welcome";
 import Footer from "./headFooter/footer";
-import SkillsUI from "./SkillsUI";
 import "./index.css";
 import "./Mobile.css";
 
@@ -23,7 +22,6 @@ const VideoBackground: React.FC = () => (
 );
 
 interface AppProps {}
-
 const App: React.FC<AppProps> = () => {
   const [dontShowAgain, setDontShowAgain] = useState<boolean>(() => {
     return JSON.parse(localStorage.getItem("dontShow") ?? "false");
@@ -35,11 +33,7 @@ const App: React.FC<AppProps> = () => {
   });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
       localStorage.setItem("dontShow", JSON.stringify(dontShowAgain));
-    }, 1000);
-
-    return () => clearTimeout(timer);
   }, [dontShowAgain]);
 
   const bgToggle = () => {
@@ -51,14 +45,13 @@ const App: React.FC<AppProps> = () => {
   return (
     <>
       {bgSwitch === "on" && <VideoBackground />}
-      {!dontShowAgain && <Welcome setDontShowAgain={setDontShowAgain} dontShowAgain={dontShowAgain} />}
+      {!dontShowAgain && <Welcome setDontShowAgain={setDontShowAgain} />}
       <div className="opacity">
         <NavBar />
         <Header bgToggle={bgToggle} bgSwitch={bgSwitch} />
         <MainProjects />
         <MoreProjects />
         <Footer />
-        {/* <SkillsUI skillsOpen={true}/> */}
       </div>
     </>
   );

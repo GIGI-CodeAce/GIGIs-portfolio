@@ -97,6 +97,7 @@ main {
     cursor: pointer;
     background: rgba(245, 245, 245, 0.250);
     padding: 10px 30px;
+    margin-right: 5px;
     color: white;
     font-weight: 600;
     font-size: 15px;
@@ -155,6 +156,13 @@ main {
     left: 2px;
   }
 
+  .Recources {
+    filter: drop-shadow(1px 1px 30px hsl(0, 0%, 50%));
+  }
+  .Recources:hover{
+    filter: drop-shadow(1px 1px 30px hsl(0, 0%, 0%));
+  }  
+
 
 
   @keyframes glitch {
@@ -171,7 +179,7 @@ main {
   }
 
   .special {
-    color:hsl(0, 0%, 50%);
+    color:hsl(0, 0%, 55%);
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: colorPulse 2s infinite alternate;

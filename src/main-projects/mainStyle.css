@@ -140,11 +140,10 @@ width: 200px;
 .visitBtn:hover {
     cursor: pointer;
     border-radius: 15px;
-    color: hsl(222, 100%, 60%);
+    color: hsl(120, 100%, 30%);
 }
 
 .visitBtn:active {
-    color: hsl(120, 100%, 40%);
     border-style: dashed;
     opacity: 0.5;
 }

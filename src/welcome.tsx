@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./welcome.css";
 
-// Define types for the props
 interface WelcomeProps {
   setDontShowAgain: (value: boolean) => void;
 }
@@ -12,6 +11,7 @@ interface Greeting {
 }
 
 function Welcome({ setDontShowAgain }: WelcomeProps) {
+  const [dblClick, setDblClick] = useState(false)
   const [helloTrigger, setHelloTrigger] = useState(true);
   const [displaySite, setDisplaySite] = useState<string>("none");
   const [siteOpacity, setSiteOpacity] = useState<string>("0");
@@ -109,11 +109,13 @@ function getLocalizedGreeting(langCode: string): Greeting {
             </h2>
             <h2>👋</h2>
             <h2 id="continueMsg">Click anywhere to continue</h2>
-            <h2 onClick={handleDontShow} id="dontShow">Don't show this again</h2>
+            <div>
+            {!dblClick &&  <h2 onClick={(e) => {e.stopPropagation(); setDblClick(true);}} id="dontShow">Don't show this again</h2>}
+            {dblClick && <h2 onClick={handleDontShow} id="dontShow">Are you sure?</h2>}
+            </div>
           </div>
         </div>
       )}
-
       <div className={`opacity ${animateOpacity ? "fadeIn" : ""}`} style={{ display: displaySite }}></div>
 
       <style>{`
