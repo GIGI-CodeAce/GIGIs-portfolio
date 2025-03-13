@@ -163,7 +163,14 @@ main {
     filter: drop-shadow(1px 1px 30px hsl(0, 0%, 0%));
   }  
 
+  .tech-icons img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
 
+  .glitch-active img {
+    filter: grayscale(0%);
+  }
 
   @keyframes glitch {
     0% { transform: translate(0); }

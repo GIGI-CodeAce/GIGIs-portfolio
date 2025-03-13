@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSpecialCharacters(getRandomItemFromArray(specialArray));
-      setGlitch(Math.random() > 0.7);
+      setGlitch(Math.random() > 0.6);
     }, 1300);
 
     return () => clearInterval(interval);
@@ -82,15 +82,15 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
             <span id="me" className="darkSwitchColor">Dobre Robert</span>
           </b>
           <br />
-          <div className="tech-icons">
+          <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
             {[
-               { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/html.png", alt: "HTML5" },
-               { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/css3.png", alt: "CSS3" },
-               { link: "https://sass-lang.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/sass.png", alt: "SASS" },
-              { link: "https://tailwindcss.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/tailwindcss.png", alt: "Tailwind" },
-              { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/javascript.png", alt: "JavaScript" },
-              { link: "https://www.typescriptlang.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/typescript.png", alt: "TypeScript" },
-              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/react.png", alt: "React" },
+               { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/html5-original.png", alt: "HTML5" },
+               { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png", alt: "CSS3" },
+               { link: "https://sass-lang.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/sass-original.png", alt: "SASS" },
+              { link: "https://tailwindcss.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/tailwind.png", alt: "Tailwind" },
+              { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/javascript.png", alt: "JavaScript" },
+              { link: "https://www.typescriptlang.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/typescript-original.png", alt: "TypeScript" },
+              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/react-original.png", alt: "React" },
             ].map((tech, index) => (
               <abbr title={tech.alt}>
                 <a key={index} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
@@ -121,35 +121,37 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
       </div>
 
       <style>{`
-        .darkSwitchColor {
-          color: ${color};
-          transition: color 0.5s ease-in-out;
-        }
+  .darkSwitchColor {
+    color: ${color};
+    transition: color 0.5s ease-in-out;
+  }
 
-        .glitch {
-          text-shadow: 2px 0 red, -2px 0 blue;
-          animation: glitch-effect 0.3s infinite alternate;
-        }
+  .glitch {
+    text-shadow: 2px 0 red, -2px 0 blue;
+    animation: glitch-effect 0.3s infinite alternate;
+  }
 
-        @keyframes glitch-effect {
-          0% {
-            transform: translateX(-2px);
-          }
-          100% {
-            transform: translateX(2px);
-          }
-        }
+  @keyframes glitch-effect {
+    0% {
+      transform: translateX(-2px);
+    }
+    100% {
+      transform: translateX(2px);
+    }
+  }
 
-        .darkSwitchBack {
-          background-color: ${backColor};
-          transition: background-color 0.5s ease-in-out;
-        }
+  .darkSwitchBack {
+    background-color: ${backColor};
+    transition: background-color 0.5s ease-in-out;
+  }
 
-        .visitBtn {
-          color: ${color2};
-          background-color: ${btnBack};
-        }
-      `}</style>
+  .visitBtn {
+    color: ${color2};
+    background-color: ${btnBack};
+  }
+
+`}</style>
+
 
       <SkillsUI skillsOpen={openSkills} setSkillsOpen={setOpenSkills} />
     </>

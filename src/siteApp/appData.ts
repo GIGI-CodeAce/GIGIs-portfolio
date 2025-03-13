@@ -39,7 +39,7 @@ export function MyProjectsData() {
         id: 4,
         img: urlImg('myProjectsImgs', 'YC-PG'),
         title: "YC&PG",
-        desc: "YP&CG, your go-to website for the power of customization in code creation! Imagine a platform where you have the freedom to craft and tailor specific code patterns for your numerous needs and create as many as you need.",
+        desc: "Your passwords and codes generator, there for the power of code creation! A platform where you could craft and tailor specific code patterns for your numerous needs and create as many as you need.",
         simple: "Your Passwords and Codes Generator is a program where you can set up a specific character code path and generate as many as you need" ,
         link: "https://gigi-codeace.github.io/YC-PG/CGmenu",
         repo: "https://github.com/GIGI-CodeAce/YC-PG",

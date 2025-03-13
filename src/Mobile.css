@@ -159,6 +159,12 @@ u {
     .hello h2:first-child{
     font-size: 40px;
     }
+    .skills-title{
+        font-size: 1.5rem;
+    }
+    .skills-category {
+        padding: 0px 60px;
+    }
 
     .right-side span {
         font-size: 12px;

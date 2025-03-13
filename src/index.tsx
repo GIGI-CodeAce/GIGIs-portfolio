@@ -12,7 +12,6 @@ import "./Mobile.css";
 const bgVidWebm = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.webm";
 const bgVidMp4 = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4";
 
-// VideoBackground component
 const VideoBackground: React.FC = () => (
   <video className="video-background" autoPlay loop muted playsInline>
     <source src={bgVidWebm} type="video/webm" />

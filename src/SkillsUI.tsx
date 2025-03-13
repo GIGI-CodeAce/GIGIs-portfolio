@@ -7,20 +7,20 @@ interface SkillsUIProps {
 
 const skillsData = {
     "Frontend": [
-        { name: "HTML", experience: "3 Years" },
-        { name: "CSS", experience: "3 Years" },
-        { name: "SCSS", experience: "3 Years" },
-        { name: "TailwindCSS", experience: "3 Years" }
+        { name: "HTML", experience: "3+ Years" },
+        { name: "CSS", experience: "3+ Years" },
+        { name: "SCSS", experience: "6+ Months" },
+        { name: "TailwindCSS", experience: "1+ Years" }
     ],
     "Programming Languages": [
-        { name: "JavaScript", experience: "3 Years" },
-        { name: "TypeScript", experience: "2 Years" }
+        { name: "JavaScript", experience: "3+ Years" },
+        { name: "TypeScript", experience: "1+ Years" }
     ],
     "Tools & Frameworks": [
-        { name: "React.js", experience: "3 Years" },
-        { name: "Vue.js", experience: "3 Months" },
-        { name: "Git", experience: "3 Years" },
-        { name: "Webpack", experience: "2 Years" }
+        { name: "React.js", experience: "2+ Years" },
+        { name: "Vue.js", experience: "3+ Months" },
+        { name: "Git", experience: "2+ Years" },
+        { name: "Webpack", experience: "2+ Years" }
     ]
 };
 
