@@ -90,24 +90,54 @@ main {
     width: 45px;
     height: 45px;
   }
-  .resume{
+  .resume {
+    position: relative;
+    overflow: hidden;
     border-radius: 50px;
     border: 4px solid white;
     text-transform: uppercase;
     cursor: pointer;
     background: rgba(245, 245, 245, 0.250);
     padding: 10px 30px;
-    margin-right: 5px;
+    margin: 0 10px 0 10px;
     color: white;
     font-weight: 600;
     font-size: 15px;
+    transition: border-style 0.3s ease-in-out;
   }
-  .resume:hover{
+  
+  .resume::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(55%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .resume:hover::before {
+    transform: translateX(0);
+  }
+  
+  .resume:hover {
     border-style: dashed;
   }
-  .resume:active{
-    border-color: black;
-    color: black;
+  
+  .glitch-active .resume::before {
+    animation: slideSquare 1s linear infinite;
+  }
+  
+  @keyframes slideSquare {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
   }
 
   .header-container {
@@ -131,8 +161,11 @@ main {
     cursor: pointer;
     transition: background-color 0.5s ease;
     user-select: none;
+
   }
-  
+  .switch{
+    transition: color 0.3s ease;
+  }
   .bg-slider .switch {
     position: absolute;
     top: 2px;
@@ -162,7 +195,9 @@ main {
   .Recources:hover{
     filter: drop-shadow(1px 1px 30px hsl(0, 0%, 0%));
   }  
-
+  .tech-icons{
+    margin-bottom:10px;
+  }
   .tech-icons img {
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;

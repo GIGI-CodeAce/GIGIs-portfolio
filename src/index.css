@@ -13,6 +13,11 @@ code {
     monospace;
 }
 
+::selection {
+  background: #ffffff;
+  color: #000;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

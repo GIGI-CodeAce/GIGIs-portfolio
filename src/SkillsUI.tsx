@@ -32,7 +32,8 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
     return (
         <>
             {skillsOpen && (
-                <div className="skills-container">
+                <div onClick={HandlePopup} className='grayBg'>
+                    <div className="skills-container">
                     <button onClick={HandlePopup} id="exit">X</button>
                     <h2 className="skills-title">My Skills & Experience</h2>
                     <div className="skills-wrapper">
@@ -50,6 +51,7 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
                             </div>
                         ))}
                     </div>
+                </div>
                 </div>
             )}
         </>

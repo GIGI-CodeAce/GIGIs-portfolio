@@ -67,30 +67,28 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           <span className="special"> {specialCharacters}</span>
         </h1>
         <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
-          <div className="switch"></div><br/>
+          <div  style={{ backgroundColor: glitch ? "#6361d1" : "white", transition: "background-color 0.3s ease" }}  className="switch"></div><br/>
           <h5>{bgSwitch === "on" ? "bg" : "no-bg"}</h5>
         </div>
       </header>
 
       <div className="moreAbout">
         <div className="litteTalk">
-          <b>
-            <span id="me" className="darkSwitchColor">
+          <b><span id="me" className="darkSwitchColor">
               A passionate web Developer.
             </span>
             <br />
             <span id="me" className="darkSwitchColor">Dobre Robert</span>
-          </b>
-          <br />
+          </b><br />
           <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
             {[
-               { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/html5-original.png", alt: "HTML5" },
-               { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png", alt: "CSS3" },
-               { link: "https://sass-lang.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/sass-original.png", alt: "SASS" },
+              //  { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/html5-original.png", alt: "HTML5" },
               { link: "https://tailwindcss.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/tailwind.png", alt: "Tailwind" },
+              { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png", alt: "CSS3" },
               { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/javascript.png", alt: "JavaScript" },
               { link: "https://www.typescriptlang.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/typescript-original.png", alt: "TypeScript" },
-              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/react-original.png", alt: "React" },
+              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/react-original.png", alt: "React.js" },
+              { link: "https://vuejs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/vue.png", alt: "Vue.js" },
             ].map((tech, index) => (
               <abbr title={tech.alt}>
                 <a key={index} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
@@ -102,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           <div className="skillInfo">
             <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">
               <button className="resume">My Resume</button>
-            </a>
+            </a>-
             <button onClick={handleClick} className="resume">
               Full Skills
             </button>
@@ -149,6 +147,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     color: ${color2};
     background-color: ${btnBack};
   }
+
 
 `}</style>
 
