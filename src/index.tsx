@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./headFooter/header";
-import NavBar from "./navBar/nav";
-import MainProjects from "./main-projects/mainProjects";
-import MoreProjects from "./More-apps/moreProjects";
-import Welcome from "./welcome";
-import Footer from "./headFooter/footer";
-import "./index.css";
-import "./Mobile.css";
+import Header from "./Components/Header/header";
+import NavBar from "./Components/navBar/nav";
+import MainProjects from "./Sections/main-projects/mainProjects";
+import MoreProjects from "./Sections/More-apps/moreProjects";
+import Welcome from "./Components/Welcome/welcome";
+import Footer from "./Components/Footer/footer";
+import "./OtherStyles/index.css"
+import "./OtherStyles/Mobile.css";
 
 const bgVidWebm = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.webm";
 const bgVidMp4 = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4";

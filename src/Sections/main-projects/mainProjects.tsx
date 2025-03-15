@@ -1,7 +1,7 @@
 import './mainStyle.css';
-import App from '../siteApp/App';
-import {MyProjectsData} from '../siteApp/appData';
-import Slider from '../slideHeader/slider';
+import App from '../../../App';
+import {MyProjectsData} from '../../../appData';
+import Slider from '../../Components/Slider/slider';
 
 function MyProjects() {
     let Apps = MyProjectsData();

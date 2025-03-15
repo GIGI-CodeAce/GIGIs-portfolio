@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './sliderStyles.css';
-import { MyProjectsData } from '../siteApp/appData';
+import { MyProjectsData } from '../../../appData';
 
 function Slider() {
     const [currentIndex, setCurrentIndex] = useState(0);

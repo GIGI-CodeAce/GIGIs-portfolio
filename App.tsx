@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../Mobile.css'
+import './src/OtherStyles/Mobile.css'
 
 function App(props:any) {
 

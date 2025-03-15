@@ -1,6 +1,6 @@
 import './moreStyle.css';
-import App from '../siteApp/App.tsx';
-import { MoreProjectsData } from '../siteApp/appData.ts';
+import App from '../../../App.tsx';
+import { MoreProjectsData } from '../../../appData.ts';
 
 function MoreProjects() {
 

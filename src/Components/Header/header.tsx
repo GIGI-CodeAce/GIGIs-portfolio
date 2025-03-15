@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SkillsUI from "../SkillsUI";
+import SkillsUI from "../FullSkills/SkillsUI";
 import "./header.css";
 
 interface HeaderProps {
@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           className={`darkSwitchColor transition-all duration-300 ease-in-out ${glitch ? "glitch" : ""}`}
         >
           Welcome 
-          <span className="special"> {specialCharacters}</span>
+          {specialCharacters && <span className="special"> {specialCharacters}</span>}
         </h1>
         <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
           <div  style={{ backgroundColor: glitch ? "#6361d1" : "white", transition: "background-color 0.3s ease" }}  className="switch"></div><br/>
@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           </b><br />
           <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
             {[
-              //  { link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/html5-original.png", alt: "HTML5" },
+              //{ link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/html5-original.png", alt: "HTML5" },
               { link: "https://tailwindcss.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/tailwind.png", alt: "Tailwind" },
               { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png", alt: "CSS3" },
               { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/javascript.png", alt: "JavaScript" },
