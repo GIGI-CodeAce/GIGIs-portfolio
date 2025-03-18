@@ -1,7 +1,7 @@
 <h1 align="center" id="title">GIGIs-portfolio  v1.4.0</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/MRNGmedia/main/Media/RNGlogo.png" alt="project-image">
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">
 </p>
 
 <p id="description">
@@ -23,7 +23,7 @@ My portfolio website! you can find there anything related to my programming expe
 * **Responsive & Device Previews** – Icons allow visitors to preview projects on different screen sizes.  
 * **Well-Organized Layout** – Sections for Introduction, Projects, and eCommerce showcase, making navigation intuitive.  
 
-  <img align="center" src="/GIGIs-portfolio/public/overview.png" alt="project-screenshot" width="100%" height="500">
+  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="90%">
 
 <br></br>
 
