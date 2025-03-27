@@ -4,8 +4,8 @@
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">
 </p>
 
-<p id="description">
-My portfolio website! you can find there anything related to my programming experience
+<p id="description" align="center">
+Welcome to my portfolio website! Here, you'll find a showcase of my programming experience, featuring a diverse range of projects, including 2D games, codes generator, e-commerce website, clones, and more.
 </p>
 
 <h2 align="center">Visit here</h2>
