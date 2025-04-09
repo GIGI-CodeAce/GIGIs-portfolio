@@ -21,7 +21,7 @@
     opacity: 0.5;
     font-size: 20px;
     
-    animation: shadeInf 2s infinite, shade 3s 1;
+    animation: shadeInf 2s infinite, shade 2s 1;
     }
 
   #dontShow{
@@ -52,7 +52,7 @@
 
 
 @keyframes shadeInf{
-0%{opacity: 0.3;}
-50%{opacity: 0.8;}
-100%{opacity: 0.3;}
+0%{opacity: 0.8;}
+50%{opacity: 0.3;}
+100%{opacity: 0.8}
 }

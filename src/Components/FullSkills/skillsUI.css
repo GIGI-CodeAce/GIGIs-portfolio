@@ -31,7 +31,7 @@
     animation: slide 0.5s ease-out forwards;
 }
 
-.grayBg{
+.skills-overlay{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -93,7 +93,23 @@
     font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: bold;
     list-style-type: none;
+    transition: box-shadow 0.2s ease;
 }
+.skill-item:hover{
+    box-shadow: 0px 3px 2px rgba(255, 255, 255, 0.3);
+}
+.skill-beginner {
+    background: hsla(201, 100%, 77%, 0.3); /* soft blue */
+  }
+  
+  .skill-intermediate {
+    background: hsla(45, 100%, 75%, 0.3); /* warm yellow */
+  }
+  
+  .skill-advanced {
+    background: hsla(140, 70%, 70%, 0.3); /* mellow green */
+  }
+  
 
 #exit {
     position: fixed;

@@ -1,61 +1,80 @@
 import './skillsUI.css';
 
-interface SkillsUIProps {
-    skillsOpen: boolean;
-    setSkillsOpen: any;
+interface Skill {
+  name: string;
+  amount: number;
+  timeUnit: 'Month' | 'Year';
 }
 
-const skillsData = {
-    "Frontend": [
-        { name: "HTML", experience: "3+ Years" },
-        { name: "CSS", experience: "3+ Years" },
-        { name: "SCSS", experience: "6+ Months" },
-        { name: "TailwindCSS", experience: "1+ Years" }
-    ],
-    "Programming Languages": [
-        { name: "JavaScript", experience: "3+ Years" },
-        { name: "TypeScript", experience: "1+ Years" }
-    ],
-    "Tools & Frameworks": [
-        { name: "React.js", experience: "2+ Years" },
-        { name: "Vue.js", experience: "3+ Months" },
-        { name: "Git", experience: "2+ Years" },
-        { name: "Webpack", experience: "2+ Years" }
-    ]
+interface SkillsData {
+  [category: string]: Skill[];
+}
+
+interface SkillsUIProps {
+  skillsOpen: boolean;
+  setSkillsOpen: (open: boolean) => void;
+}
+
+const skillsData: SkillsData = {
+  "Frontend": [
+    { name: "HTML", amount: 3, timeUnit: 'Year' },
+    { name: "CSS", amount: 3, timeUnit: 'Year' },
+    { name: "SCSS", amount: 6, timeUnit: 'Month' },
+    { name: "TailwindCSS", amount: 1, timeUnit: 'Year' }
+  ],
+  "Programming Languages": [
+    { name: "JavaScript", amount: 3, timeUnit: 'Year' },
+    { name: "TypeScript", amount: 1, timeUnit: 'Year' }
+  ],
+  "Tools & Frameworks": [
+    { name: "React.js", amount: 2, timeUnit: 'Year' },
+    { name: "Vue.js", amount: 3, timeUnit: 'Month' },
+    { name: "Git", amount: 2, timeUnit: 'Year' },
+    // { name: "Webpack", amount: 2, timeUnit: 'Year' },
+    { name: "Node.js", amount: 1, timeUnit: 'Month' },
+    { name: "Express.js", amount: 1, timeUnit: 'Month' }
+  ]
 };
 
-function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
+const getSkillLevel = (skill: Skill): string => {
+    const months = skill.timeUnit === 'Year' ? skill.amount * 12 : skill.amount;
+  
+    if (months < 6) return 'skill-beginner';
+    if (months >= 6 && months < 24) return 'skill-intermediate';
+    if (months >= 24 && months < 60) return 'skill-advanced';
+    return 'skill-expert';
+  };
 
-    function HandlePopup(){
-        setSkillsOpen(false)
-    }
-    return (
-        <>
-            {skillsOpen && (
-                <div onClick={HandlePopup} className='grayBg'>
-                    <div className="skills-container">
-                    <button onClick={HandlePopup} id="exit">X</button>
-                    <h2 className="skills-title">My Skills & Experience</h2>
-                    <div className="skills-wrapper">
-                        {Object.entries(skillsData).map(([category, skills]) => (
-                            <div key={category} className="skills-category">
-                                <h3 className="category-title">{category}</h3>
-                                <ul className="skills-list">
-                                    {skills.map((skill, index) => (
-                                        <li key={index} className="skill-item">
-                                            <span className="skill-name">{skill.name}</span>
-                                            <span className="skill-experience">{skill.experience}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                </div>
-            )}
-        </>
-    );
+function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
+  const handlePopupClose = () => setSkillsOpen(false);
+
+  if (!skillsOpen) return null;
+
+  return (
+    <div className="skills-overlay" onClick={handlePopupClose}>
+      <div className="skills-container" onClick={(e) => e.stopPropagation()}>
+        <button onClick={handlePopupClose} id="exit">X</button>
+        <h2 className="skills-title">My Skills & Experience</h2>
+        <div className="skills-wrapper">
+          {Object.entries(skillsData).map(([category, skills]) => (
+            <div key={category} className="skills-category">
+              <h3 className="category-title">{category}</h3>
+              <ul className="skills-list">
+                {skills.map((skill) => (
+                  <li key={skill.name} className={`skill-item ${getSkillLevel(skill)}`}>
+                    <span className="skill-name">{skill.name}</span>
+                    <span className="skill-experience">
+                    {skill.amount}+ {skill.timeUnit}{skill.amount !== 1 ? 's' : ''}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default SkillsUI;

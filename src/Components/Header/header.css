@@ -38,7 +38,7 @@ main {
     font-size: 40px;
     margin: 40px 20px;
 }
-#video {
+.video {
     width: 100%;
     max-width: 580px;
     min-width: 300px;
@@ -52,13 +52,17 @@ main {
 
     transition: border 0.3s ease;
 }
-#video:hover{
+.video:hover{
   border: 2px solid white;
+}
+.videoGlitch{
+  border: 2px solid hsla(241, 55%, 60%, 0.9);
 }
 .moreAbout {
   display: flex;
     justify-content: space-between;
     margin: 10px 0px;
+    padding: 0px 0px 10px 0px;
     border: 5px solid white;
     border-top: none;
   }
@@ -74,7 +78,7 @@ main {
   }
   
   .litteTalk {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
     line-height: 60px;
     font-size: 30px;
@@ -159,12 +163,17 @@ main {
     height: 30px;
     border-radius: 60px;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0);
     user-select: none;
 
   }
-  .switch{
-    transition: color 0.3s ease;
+  .bg-slider:hover{
+    border-color: white;
+  }
+  .switch {
+    background-color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
   .bg-slider .switch {
     position: absolute;
@@ -172,10 +181,13 @@ main {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: white;
     border: 3px solid black;
-    transition: left 0.5s ease;
+    transition: left 0.5s ease, background-color 0.3s ease;
   }
+  .switch-blue{
+    background-color: #6361d1;
+  }
+  
   
   .bg-slider.on {
     background-color: black;
@@ -221,7 +233,7 @@ main {
   }
 
   .special {
-    color:hsl(0, 0%, 55%);
+    color:hsl(0, 0%, 60%);
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: colorPulse 2s infinite alternate;

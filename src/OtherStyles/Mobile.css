@@ -12,46 +12,64 @@ main {
     border-radius: 10px;
     width: 310px;
     height: 300px;
-    border: 4px dashed hsla(0, 0%, 100%, 0.3);
-    background-color: rgba(255, 255, 255, 0.3);
+    border: 4px dashed white;
+    background-color: rgba(255, 255, 255, 0.4);
     z-index: 1001;
 }
 
 .popup-container p,
 .popup-container h1,
 .popup-container div {
-    background-color: hsla(0, 0%, 100%, 0.3);
+    background-color: hsla(0, 0%, 100%, 0.5);
     border-radius: 5px;
     padding: 5px;
 }
 
-.blur {
+.warning-buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.warning-blur {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
-.mobileVisitBtn{
+.mobileBackBtn{
     width: 150px;
     border-radius: 5px;
     border-style: groove;
     font-size: 15px;
     background-color: hsla(0, 0%, 100%, 0.3);
+    margin: 0 auto;
 
     transition: border-radius 0.3s ease;
 }
-.mobileVisitBtn:hover {
+.mobileVisitBtn{
+    width: 150px;
+    font-size: 15px;
+    background-color: rgba(0, 0, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin: 0 auto;
+
+    transition: border-radius 0.3s ease;
+}
+.mobileBackBtn:hover, .mobileVisitBtn:hover{
     cursor: pointer;
     border-radius: 15px;
 }
-
-.mobileVisitBtn:active {
-    color: hsl(0, 0%, 40%);
+.mobileVisitBtn:hover{
+    text-decoration: underline;
+}
+.mobileBackBtn:active {
     border-style: dashed;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .howTo {
@@ -72,7 +90,6 @@ u {
     background-color: hsl(0, 0%, 10%);
 }
 
-/* Exit Settings Button */
 #exit-settings {
     position: absolute;
     left: 89.5%;
@@ -82,15 +99,15 @@ u {
     background-color: hsl(0, 0%, 80%);
     border: 1px solid black;
     color: black;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #exit-settings:active {
-    background-color: hsl(284, 35%, 15%);
+    background-color: hsl(0, 0%, 69%);
 }
 
 #exit-settings:hover {
-    color: hsl(0, 0%, 70%);
+    color: white;
 }
 
 /* Responsive Design */
@@ -116,7 +133,7 @@ u {
 }
 
 @media only screen and (max-width: 800px) {
-    #video {
+    .video {
         margin: 20px 10px;
     }
 

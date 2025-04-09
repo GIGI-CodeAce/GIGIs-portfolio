@@ -1,5 +1,5 @@
 import './mainStyle.css';
-import App from '../../../App';
+import App from '../../../projectDisplay';
 import {MyProjectsData} from '../../../appData';
 import Slider from '../../Components/Slider/slider';
 

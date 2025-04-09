@@ -1,5 +1,5 @@
 import './moreStyle.css';
-import App from '../../../App.tsx';
+import App from '../../../projectDisplay.tsx';
 import { MoreProjectsData } from '../../../appData.ts';
 
 function MoreProjects() {

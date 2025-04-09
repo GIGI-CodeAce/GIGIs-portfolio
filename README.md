@@ -1,4 +1,4 @@
-<h1 align="center" id="title">GIGIs-portfolio  v1.4.0</h1>
+<h1 align="center" id="title">GIGIs-portfolio  v1.4.4</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">
@@ -24,6 +24,7 @@ Welcome to my portfolio website! Here, you'll find a showcase of my programming 
 * **Well-Organized Layout** – Sections for Introduction, Projects, and eCommerce showcase, making navigation intuitive.  
 
   <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="90%">
+    <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="100%" height="90%">
 
 <br></br>
 

@@ -17,7 +17,7 @@ function Welcome({ setDontShowAgain }: WelcomeProps) {
   const [siteOpacity, setSiteOpacity] = useState<string>("0");
   const [animateHello, setAnimateHello] = useState<boolean>(false);
   const [animateOpacity, setAnimateOpacity] = useState<boolean>(false);
-  const [greeting, setGreeting] = useState<Greeting>({ hi: "Hello", flag: "🇬🇧" });
+  const [greeting, setGreeting] = useState<Greeting>({ hi: "Welcome", flag: "🇬🇧" });
 
   const greetings = {
     en: { morning: "Good morning", afternoon: "Good afternoon", evening: "Good evening", flag: "🇬🇧" },
@@ -104,9 +104,9 @@ function getLocalizedGreeting(langCode: string): Greeting {
       {helloTrigger && (
         <div onClick={handleContinue} className={`hello ${animateHello ? "shadeIn" : ""}`}>
           <div>
-            <h2 className="mainGreeting">
+            {greeting && <h2 className="mainGreeting">
               {greeting.hi} <sup>{greeting.flag}</sup>
-            </h2>
+            </h2>}
             <h2>👋</h2>
             <h2 id="continueMsg">Click anywhere to continue</h2>
             <div>

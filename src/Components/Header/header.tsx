@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           {specialCharacters && <span className="special"> {specialCharacters}</span>}
         </h1>
         <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
-          <div  style={{ backgroundColor: glitch ? "#6361d1" : "white", transition: "background-color 0.3s ease" }}  className="switch"></div><br/>
+        <div className={`switch ${glitch ? 'switch-blue' : ''}`}></div><br/>
           <h5>{bgSwitch === "on" ? "bg" : "no-bg"}</h5>
         </div>
       </header>
@@ -108,7 +108,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
         </div>
         <div className="vidContainer">
         <iframe
-          id="video"
+          className={`video ${glitch ? 'videoGlitch' : ''}`}
           width="560"
           height="315"
           src="https://www.youtube.com/embed/T3e0iaCirdI?mute=1"
@@ -137,21 +137,12 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
       transform: translateX(2px);
     }
   }
-
-  .darkSwitchBack {
-    background-color: ${backColor};
-    transition: background-color 0.5s ease-in-out;
-  }
-
   .visitBtn {
     color: ${color2};
     background-color: ${btnBack};
   }
 
-
 `}</style>
-
-
       <SkillsUI skillsOpen={openSkills} setSkillsOpen={setOpenSkills} />
     </>
   );

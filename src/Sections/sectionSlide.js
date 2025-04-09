@@ -13,7 +13,7 @@ const SlideInSection = ({ children }) => {
           }
         });
       },
-      { threshold: 0.2 } // Adjust visibility threshold
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
