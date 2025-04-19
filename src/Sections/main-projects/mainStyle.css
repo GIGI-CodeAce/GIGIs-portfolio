@@ -204,4 +204,9 @@ width: 200px;
 {
     width: 200px;
 }
+.project-item-main:nth-child(1) .visitBtn,
+.project-item-main:nth-child(2) .visitBtn
+{
+width: 150px;
+}
 }
