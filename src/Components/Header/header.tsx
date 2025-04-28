@@ -60,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     <>
       <header className="header-container">
         <h1 
-          id="welcome" 
+          id="welcomeMessage" 
           className={`darkSwitchColor transition-all duration-300 ease-in-out ${glitch ? "glitch" : ""}`}
         >
           Welcome 
@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
               { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/react-original.png", alt: "React.js" },
               { link: "https://vuejs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/vue.png", alt: "Vue.js" },
             ].map((tech, index) => (
-              <abbr title={tech.alt}>
+              <abbr key={index} title={tech.alt}>
                 <a key={index} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
                 <img src={tech.icon} alt={tech.alt} />
               </a>

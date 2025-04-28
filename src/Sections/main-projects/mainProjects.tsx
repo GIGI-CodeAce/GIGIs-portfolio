@@ -1,25 +1,54 @@
 import './mainStyle.css';
+import supabase from '../../supabase-client';
 import App from '../../../projectDisplay';
-import {MyProjectsData} from '../../../appData';
 import Slider from '../../Components/Slider/slider';
+import { useState, useEffect } from 'react';
+
+export interface projectData {
+    id: number;
+    img: string;
+    title: string;
+    desc: string;
+    simple: string;
+    link: string;
+    repo: string;
+    mobile: boolean;
+}
 
 function MyProjects() {
-    let Apps = MyProjectsData();
+    const [projects, setProjects] = useState<projectData[]>([]);
+
+    useEffect(() => {
+        async function fetchProjects() {
+            const { data, error } = await supabase
+                .from('main_apps_data')
+                .select('*')
+                .order('id', { ascending: false })
+
+            if (error) {
+                console.error('Error fetching Projects:', error);
+                return;
+            }
+
+            setProjects(data || []);
+            console.log('Fetched Projects:', data);
+        }
+
+        fetchProjects();
+    }, []);
 
     return (
         <>
-            <Slider
-            />
+            <Slider />
             <div className='projects--category main darkSwitchBack darkSwitchBorder darkSwitchColor'>
                 <h2 id='myProjects'>Main projects</h2>
             </div>
 
             <div className='project darkSwitchColor'>
-                {Apps.map((item) => (
-                <div className='project-item project-item-main darkSwitchBack darkSwitchBorder' key={item.id}>
-                <App {...item} />
-                </div>
-
+                {projects.map((item) => (
+                    <div className='project-item project-item-main darkSwitchBack darkSwitchBorder' key={item.id}>
+                        <App {...item} />
+                    </div>
                 ))}
             </div>
         </>

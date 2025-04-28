@@ -1,10 +1,31 @@
 import './moreStyle.css';
 import App from '../../../projectDisplay.tsx';
-import { MoreProjectsData } from '../../../appData.ts';
+import { projectData } from '../main-projects/mainProjects.tsx';
+import supabase from '../../supabase-client.ts';
+import { useState,useEffect } from 'react';
 
 function MoreProjects() {
 
-  let Apps = MoreProjectsData();
+  const [projects, setProjects] = useState<projectData[]>([])
+
+  useEffect(() => {
+      async function fetchProjects() {
+          const { data, error } = await supabase
+              .from('side_apps_data')
+              .select('*')
+              .order('id', { ascending: false })
+
+          if (error) {
+              console.error('Error fetching Projects:', error);
+              return;
+          }
+
+          setProjects(data || []);
+          console.log('Fetched Projects:', data);
+      }
+
+      fetchProjects();
+  }, []);
 
   return (
     <>
@@ -13,7 +34,7 @@ function MoreProjects() {
       </div>
 
       <div className='project darkSwitchColor'>
-        {Apps.map((item) => (
+        {projects.map((item) => (
             <div className='project-item darkSwitchBack darkSwitchBorder' key={item.id}>
               <App
               {...item}

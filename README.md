@@ -22,6 +22,7 @@ Welcome to my portfolio website! Here, you'll find a showcase of my programming 
 * **Interactive Elements** – Background toggle switch, embedded showcase video, and project previews.  
 * **Responsive & Device Previews** – Icons allow visitors to preview projects on different screen sizes.  
 * **Well-Organized Layout** – Sections for Introduction, Projects, and eCommerce showcase, making navigation intuitive.  
+* **Dynamic Project Data** – Projects are connected to an API, making updates and changes simple and efficient.
 
   <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="90%"><hr/>
     <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="80%">

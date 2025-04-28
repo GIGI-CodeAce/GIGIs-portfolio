@@ -34,7 +34,7 @@ main {
     color: white;
     text-align: center;
 }
-#welcome{
+#welcomeMessage{
     font-size: 40px;
     margin: 40px 20px;
 }

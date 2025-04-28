@@ -17,7 +17,7 @@ function NavBar() {
                 <a href="https://github.com/GIGI-CodeAce" target="_blank" rel="noopener noreferrer">
                     <li id="gitHub-redirect">GIGI-CodeAce</li>
                 </a>
-                <a href="#welcome" onClick={(e) => scrollToSection(e, 'welcome')}>
+                <a href="#welcomeMessage" onClick={(e) => scrollToSection(e, 'welcomeMessage')}>
                     <li>Home</li>
                 </a>
                 <a href="#myProjects" onClick={(e) => scrollToSection(e, 'myProjects')}>
