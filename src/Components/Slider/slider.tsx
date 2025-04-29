@@ -1,43 +1,64 @@
 import { useState, useEffect } from 'react';
 import './sliderStyles.css';
-import { MyProjectsData } from '../../../appData';
+import supabase from '../../supabase-client'
+import { projectData } from '../../Sections/main-projects/mainProjects';
 
 function Slider() {
+    const [projects, setProjects] = useState<projectData[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [animationKey, setAnimationKey] = useState(0);
-    const projects = MyProjectsData();
-    const totalImages = projects.length;
 
     useEffect(() => {
+        async function fetchProjects() {
+            const { data, error } = await supabase
+                .from('main_apps_data')
+                .select('*')
+                .order('id', { ascending: false });
+
+            if (error) {
+                console.error('Error fetching Projects:', error);
+                return;
+            }
+
+            setProjects(data || []);
+        }
+        fetchProjects();
+    }, []);
+
+    useEffect(() => {
+        if (projects.length === 0) return;
+
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) =>
-                prevIndex === totalImages - 1 ? 0 : prevIndex + 1
+                prevIndex === projects.length - 1 ? 0 : prevIndex + 1
             );
             setAnimationKey((prevKey) => prevKey + 1);
         }, 15000);
 
         return () => clearInterval(interval);
-    }, [totalImages]);
+    }, [projects]);
 
     const nextImage = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === totalImages - 1 ? 0 : prevIndex + 1
+            prevIndex === projects.length - 1 ? 0 : prevIndex + 1
         );
         setAnimationKey((prevKey) => prevKey + 1);
     };
 
-    const currentImg = projects[currentIndex].img;
+    const currentProject = projects[currentIndex];
+
+    if (!currentProject) return null;
 
     return (
         <div className="container darkSwitchColor" key={animationKey}>
-            <img id="sliderImg" src={currentImg} alt={projects[currentIndex].title} />
-            <h1 id="title">{projects[currentIndex].title}</h1>
+            <img id="sliderImg" src={currentProject.img} alt={currentProject.title} />
+            <h1 id="title">{currentProject.title}</h1>
             <div className="desc">
-                {projects[currentIndex].simple}
-                <a href={projects[currentIndex].repo} target="_blank" rel="noopener noreferrer">
-                <abbr title="Github repo"><span className="git git2"></span></abbr>
+                {currentProject.simpleDesc}
+                <a href={currentProject.repo} target="_blank" rel="noopener noreferrer">
+                    <abbr title="Github repo"><span className="git git2"></span></abbr>
                 </a>
-                <img id="img2" src={currentImg} alt="Project Detail" />
+                <img id="img2" src={currentProject.img} alt="Project Detail" />
             </div>
             <button onClick={nextImage} id="next">{'>'}</button>
         </div>

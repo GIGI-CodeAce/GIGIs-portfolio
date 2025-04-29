@@ -21,7 +21,6 @@ function MoreProjects() {
           }
 
           setProjects(data || []);
-          console.log('Fetched Projects:', data);
       }
 
       fetchProjects();

@@ -7,11 +7,10 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      // Proxy API requests to Supabase
       '/rest/v1': {
-        target: 'https://wznunkyfdlhzksogfzpa.supabase.co', // Your Supabase URL
-        changeOrigin: true, // Change the origin of the request to the target
-        rewrite: (path) => path.replace(/^\/rest\/v1/, '/rest/v1'), // Rewriting the URL to match Supabase's endpoint
+        target: 'https://wznunkyfdlhzksogfzpa.supabase.co',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/rest\/v1/, '/rest/v1'),
       },
     },
   },

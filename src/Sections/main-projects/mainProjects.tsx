@@ -9,7 +9,7 @@ export interface projectData {
     img: string;
     title: string;
     desc: string;
-    simple: string;
+    simpleDesc: string;
     link: string;
     repo: string;
     mobile: boolean;
@@ -31,9 +31,7 @@ function MyProjects() {
             }
 
             setProjects(data || []);
-            console.log('Fetched Projects:', data);
         }
-
         fetchProjects();
     }, []);
 
