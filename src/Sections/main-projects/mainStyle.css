@@ -34,14 +34,18 @@
     padding: 5px 0px;
 }
 .projectImage {
-
     width: 200px;
     height: 210px ;
     background-repeat: no-repeat;
 
 }
+.projectImage{
+    cursor: pointer;
+}
 .project {
     text-align: center;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -125,6 +129,10 @@ width: 200px;
 }
 
 .visitBtn {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 150px;
     border-radius: 5px;
     border-style: groove;

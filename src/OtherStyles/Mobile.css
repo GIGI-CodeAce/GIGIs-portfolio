@@ -17,6 +17,10 @@ main {
     z-index: 1001;
 }
 
+.visitBtnHover{
+    font-size: 18px;
+}
+
 .popup-container p,
 .popup-container h1,
 .popup-container div {

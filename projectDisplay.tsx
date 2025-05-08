@@ -44,7 +44,7 @@ function App(props:any) {
     <div className='App'>
             {showWarning && <WarningPop onClose={closeWarningPop} />}
       <div className='imgContainer'>
-                    <img className='projectImage' src={props.img} alt="Project"/>
+                   <a href={props.link}><img className='projectImage' src={props.img} alt="Project"/></a>
                     {props.mobile && <abbr title="Mobile support"><div className="computer"></div></abbr>}
                     <abbr title="Computer support"><div className="phone"></div></abbr>
                     <a href={props.repo} target="_blank" rel="noopener noreferrer">
