@@ -5,7 +5,10 @@
 </p>
 
 <p id="description" align="center">
-Welcome to my portfolio website! Here, you'll find a showcase of my programming experience, featuring a diverse range of projects, including 2D games, codes generator, e-commerce website, clones, and more.
+Welcome to my portfolio website! Here, you can find a showcase of my programming experience, featuring a diverse range of projects, including
+<strong>Bloggle</strong> - News & stories sharing,
+<strong>GIGIbuy</strong> - E-commerce App,
+<strong>clones, 2D games</strong>, and some more.
 </p>
 
 <h2 align="center">Visit here</h2>

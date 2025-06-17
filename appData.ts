@@ -1,5 +1,6 @@
 // ==> Old data arrays <==
 //     No longer in use
+import img from "./public/mainWeb.ico"
 //
 // function urlImg(root:string, name:string) {
 //   return `https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/${root}/${name}.png`;
