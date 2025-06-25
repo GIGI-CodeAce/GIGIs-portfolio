@@ -13,7 +13,7 @@ const bgVidWebm = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedi
 const bgVidMp4 = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4";
 
 const VideoBackground: React.FC = () => (
-  <video className="video-background" autoPlay loop muted playsInline>
+  <video className="video-background" preload="metadata" autoPlay loop muted playsInline>
     <source src={bgVidWebm} type="video/webm" />
     <source src={bgVidMp4} type="video/mp4" />
     Your browser does not support the video tag.

@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
-import SkillsUI from "../FullSkills/SkillsUI";
-import "./header.css";
+import { useState, useEffect } from "react"
+import SkillsUI from "../FullSkills/SkillsUI"
+import React from "react"
+import "./header.css"
 
 interface HeaderProps {
-  bgToggle: () => void;
-  bgSwitch: string;
+  bgToggle: () => void
+  bgSwitch: string
 }
 
 const specialArray: string[] = ["!", "!!", "?", "??", "" , "Umm", "Friend", "Innovator",
@@ -12,7 +13,7 @@ const specialArray: string[] = ["!", "!!", "?", "??", "" , "Umm", "Friend", "Inn
 
 const getRandomItemFromArray = (array: string[]): string => {
   const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
+  return array[randomIndex]
 };
 
 const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
@@ -25,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
   const [openSkills, setOpenSkills] = useState<boolean>(false);
 
   const handleClick = () => {
-    setOpenSkills((prev) => !prev);
+    setOpenSkills((prev) => !prev)
   };
 
   useEffect(() => {
@@ -34,26 +35,26 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
       setGlitch(Math.random() > 0.6);
     }, 1300);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval)
   }, []);
 
   useEffect(() => {
     const handleDblClick = () => {
-      setColor("black");
-      setColor2("white");
-      setBackColor("hsla(0, 0%, 0%, 0.2)");
-      setBtnBack("hsl(0, 0%, 10%)");
+      setColor("black")
+      setColor2("white")
+      setBackColor("hsla(0, 0%, 0%, 0.2)")
+      setBtnBack("hsl(0, 0%, 10%)")
 
       setTimeout(() => {
-        setColor("white");
-        setColor2("black");
-        setBackColor("hsla(0, 0%, 100%, 0.2)");
-        setBtnBack("white");
+        setColor("white")
+        setColor2("black")
+        setBackColor("hsla(0, 0%, 100%, 0.2)")
+        setBtnBack("white")
       }, 500);
     };
 
     document.addEventListener("dblclick", handleDblClick);
-    return () => document.removeEventListener("dblclick", handleDblClick);
+    return () => document.removeEventListener("dblclick", handleDblClick)
   }, []);
 
   return (
@@ -110,6 +111,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
         <iframe
           className={`video ${glitch ? 'videoGlitch' : ''}`}
           width="560"
+          loading="lazy"
           height="315"
           src="https://www.youtube.com/embed/T3e0iaCirdI?mute=1"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -148,4 +150,4 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
   );
 };
 
-export default Header;
+export default React.memo(Header)

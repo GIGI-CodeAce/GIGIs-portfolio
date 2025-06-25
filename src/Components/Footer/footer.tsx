@@ -1,4 +1,5 @@
 import './footer.css'
+import React from 'react'
 
 function Footer(){
 
@@ -16,13 +17,13 @@ function Footer(){
             <ul className="socials">
 
         <a href='https://www.linkedin.com/in/dobre-robert/' target='_blank'>
-        <li>LinkedIn <img className='redirect-icons' src={linkedInIcon}/></li>
+        <li>LinkedIn <img className='redirect-icons' loading='lazy' src={linkedInIcon}/></li>
         </a>
         <a href='https://github.com/GIGI-CodeAce' target='_blank'>
-        <li>Github <img className='redirect-icons' src={githubIcon}/></li>
+        <li>Github <img className='redirect-icons' loading='lazy' src={githubIcon}/></li>
         </a>
         <a href='https://mail.google.com/mail/?view=cm&fs=1&to=gigicodeace@gmail.com&su=Inquiry&body=Hello,' target='_blank'>
-        <li>Gmail <img className='redirect-icons' src={gmailIcon}/></li>
+        <li>Gmail <img className='redirect-icons' loading='lazy' src={gmailIcon}/></li>
         </a>
     </ul>
             </div>
@@ -31,4 +32,4 @@ function Footer(){
     )
 }
 
-export default Footer
+export default React.memo(Footer)

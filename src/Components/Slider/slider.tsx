@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './sliderStyles.css';
+import React from 'react';
 import supabase from '../../supabase-client'
 import { projectData } from '../../Sections/main-projects/mainProjects';
 
@@ -13,39 +14,39 @@ function Slider() {
             const { data, error } = await supabase
                 .from('main_apps_data')
                 .select('*')
-                .order('id', { ascending: false });
+                .order('id', { ascending: false })
 
             if (error) {
-                console.error('Error fetching Projects:', error);
+                console.error('Error fetching Projects:', error)
                 return;
             }
 
-            setProjects(data || []);
+            setProjects(data || [])
         }
         fetchProjects();
     }, []);
 
     useEffect(() => {
-        if (projects.length === 0) return;
+        if (projects.length === 0) return
 
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) =>
                 prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-            );
-            setAnimationKey((prevKey) => prevKey + 1);
+            )
+            setAnimationKey((prevKey) => prevKey + 1)
         }, 15000);
 
-        return () => clearInterval(interval);
-    }, [projects]);
+        return () => clearInterval(interval)
+    }, [projects])
 
     const nextImage = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === projects.length - 1 ? 0 : prevIndex + 1
         );
-        setAnimationKey((prevKey) => prevKey + 1);
+        setAnimationKey((prevKey) => prevKey + 1)
     };
 
-    const currentProject = projects[currentIndex];
+    const currentProject = projects[currentIndex]
 
     if (!currentProject) return null;
 
@@ -58,11 +59,11 @@ function Slider() {
                 <a href={currentProject.repo} target="_blank" rel="noopener noreferrer">
                     <abbr title="Github repo"><span className="git git2"></span></abbr>
                 </a>
-                <img id="img2" src={currentProject.img} alt="Project Detail" />
+                <img id="img2" loading='lazy' src={currentProject.img} alt="Project Detail" />
             </div>
             <button onClick={nextImage} id="next">{'>'}</button>
         </div>
     );
 }
 
-export default Slider;
+export default React.memo(Slider)
