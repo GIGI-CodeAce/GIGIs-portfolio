@@ -1,11 +1,19 @@
 import { useState, useEffect } from "react"
 import SkillsUI from "../FullSkills/SkillsUI"
 import React from "react"
+import supabase from "../../supabase-client"
 import "./header.css"
 
 interface HeaderProps {
   bgToggle: () => void
   bgSwitch: string
+}
+
+interface TechnologiesDataLayout{
+  id: number
+  alt: string
+  link: string
+  icon: string
 }
 
 const specialArray: string[] = ["!", "!!", "?", "??", "" , "Umm", "Friend", "Innovator",
@@ -17,17 +25,40 @@ const getRandomItemFromArray = (array: string[]): string => {
 };
 
 const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
-  const [specialCharacters, setSpecialCharacters] = useState<string>(getRandomItemFromArray(specialArray));
-  const [glitch, setGlitch] = useState<boolean>(false);
-  const [color, setColor] = useState<string>("white");
-  const [color2, setColor2] = useState<string>("black");
-  const [backColor, setBackColor] = useState<string>("");
-  const [btnBack, setBtnBack] = useState<string>("");
-  const [openSkills, setOpenSkills] = useState<boolean>(false);
+  const [specialCharacters, setSpecialCharacters] = useState<string>(getRandomItemFromArray(specialArray))
+  const [glitch, setGlitch] = useState<boolean>(false)
+  const [color, setColor] = useState<string>("white")
+  const [color2, setColor2] = useState<string>("black")
+  const [backColor, setBackColor] = useState<string>("")
+  const [btnBack, setBtnBack] = useState<string>("")
+  const [openSkills, setOpenSkills] = useState<boolean>(false)
+
+  const [featuredTech, setFeaturedTech] = useState<TechnologiesDataLayout[]>([])
 
   const handleClick = () => {
     setOpenSkills((prev) => !prev)
   };
+
+      useEffect(() => {
+        async function fetchProjects() {
+            const { data, error } = await supabase
+                .from('featuredTech')
+                .select('*')
+                .order('id', { ascending: false })
+                
+
+            if (error) {
+                console.error('Error fetching Projects:', error);
+                return;
+            }
+
+            console.log("Fetched featuredTech:", data); // 👈 Add this
+
+            setFeaturedTech(data || []);
+            
+        }
+        fetchProjects();
+    }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     }, 1300);
 
     return () => clearInterval(interval)
-  }, []);
+  }, [])
 
   useEffect(() => {
     const handleDblClick = () => {
@@ -81,23 +112,17 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
             <br />
             <span id="me" className="darkSwitchColor">Dobre Robert</span>
           </b><br />
+
           <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
-            {[
-              //{ link: "https://www.w3.org/html/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/html5-original.png", alt: "HTML5" },
-              { link: "https://tailwindcss.com", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/tailwind.png", alt: "Tailwind" },
-              { link: "https://www.w3schools.com/css/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png", alt: "CSS3" },
-              { link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/javascript.png", alt: "JavaScript" },
-              { link: "https://www.typescriptlang.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/typescript-original.png", alt: "TypeScript" },
-              { link: "https://reactjs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/react-original.png", alt: "React.js" },
-              { link: "https://vuejs.org/", icon: "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/vue.png", alt: "Vue.js" },
-            ].map((tech, index) => (
-              <abbr key={index} title={tech.alt}>
-                <a key={index} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
+            {featuredTech.map((tech) => (
+                <abbr key={tech.id} title={tech.alt}>
+                <a key={tech.id} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
                 <img src={tech.icon} alt={tech.alt} />
               </a>
               </abbr>
             ))}
           </div>
+          
           <div className="skillInfo">
             <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">
               <button className="resume">My Resume</button>

@@ -3,12 +3,12 @@ import React from "react";
 import './src/OtherStyles/Mobile.css';
 
 interface AppProps {
-    img: string;
-    title: string;
-    desc: string;
-    link: string;
-    repo: string;
-    mobile: boolean;
+    img: string
+    title: string
+    desc: string
+    link: string
+    repo: string
+    mobile: boolean
 }
 
 function App(props: AppProps) {
