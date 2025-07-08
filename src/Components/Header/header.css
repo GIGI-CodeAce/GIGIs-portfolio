@@ -89,10 +89,16 @@ main {
     display: flex;
     justify-content: center;
   }
+
+  .techContainer{
+    height: 45px ;
+  }
+
   .Recources img{
     margin-top: 10px;
     width: 45px;
     height: 45px;
+    animation: fadeOut 1s ease forwards;
   }
   .resume {
     position: relative;
@@ -209,6 +215,7 @@ main {
   }  
   .tech-icons{
     margin-bottom:10px;
+    min-height: 62px;
   }
   .tech-icons img {
     filter: grayscale(100%);
@@ -236,5 +243,5 @@ main {
     color:hsl(0, 0%, 60%);
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    animation: colorPulse 2s infinite alternate;
+    animation: colorPulse 2s infinite alternate
   }

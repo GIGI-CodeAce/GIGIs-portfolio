@@ -16,8 +16,9 @@ interface TechnologiesDataLayout{
   icon: string
 }
 
-const specialArray: string[] = ["!", "!!", "?", "??", "" , "Umm", "Friend", "Innovator",
-                              "Visitor", "Developer", "Passionate", "User", "Traveler"];
+const specialArray: string[] = ["!", "!!", "?", "??", "", "Umm", 
+                                "Friend", "Innovator","Visitor", "Developer", "Passionate",
+                                 "User", "Traveler","Creator","Explorer","Dreamer"]
 
 const getRandomItemFromArray = (array: string[]): string => {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -44,27 +45,23 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
             const { data, error } = await supabase
                 .from('featuredTech')
                 .select('*')
-                .order('id', { ascending: false })
+                .order('id')
                 
-
             if (error) {
                 console.error('Error fetching Projects:', error);
                 return;
             }
 
-            console.log("Fetched featuredTech:", data); // 👈 Add this
-
-            setFeaturedTech(data || []);
-            
+            setFeaturedTech(data || [])
         }
         fetchProjects();
-    }, []);
+    }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
       setSpecialCharacters(getRandomItemFromArray(specialArray));
       setGlitch(Math.random() > 0.6);
-    }, 1300);
+    }, 1500);
 
     return () => clearInterval(interval)
   }, [])
@@ -87,6 +84,25 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     document.addEventListener("dblclick", handleDblClick);
     return () => document.removeEventListener("dblclick", handleDblClick)
   }, []);
+
+
+        const [visibleCount, setVisibleCount] = useState(0);
+
+      useEffect(() => {
+        if (featuredTech.length === 0) return
+
+        const interval = setInterval(() => {
+          setVisibleCount((prev) => {
+            if (prev >= featuredTech.length) {
+              clearInterval(interval);
+              return prev;
+            }
+            return prev + 1;
+          });
+        }, 50);
+
+        return () => clearInterval(interval);
+      }, [featuredTech])
 
   return (
     <>
@@ -113,16 +129,17 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
             <span id="me" className="darkSwitchColor">Dobre Robert</span>
           </b><br />
 
-          <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
-            {featuredTech.map((tech) => (
-                <abbr key={tech.id} title={tech.alt}>
-                <a key={tech.id} href={tech.link} target="_blank" className="Recources" rel="noreferrer">
-                <img src={tech.icon} alt={tech.alt} />
-              </a>
-              </abbr>
-            ))}
-          </div>
-          
+<div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
+  {featuredTech.slice(0, visibleCount).map((tech) => (
+    <abbr key={tech.id} title={tech.alt} className="techContainer">
+      <a href={tech.link} target="_blank" className="Recources" rel="noreferrer">
+        <img src={tech.icon} alt={tech.alt} />
+      </a>
+    </abbr>
+  ))}
+</div>
+
+
           <div className="skillInfo">
             <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">
               <button className="resume">My Resume</button>
@@ -145,34 +162,33 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
         </div>
       </div>
 
-      <style>{`
-  .darkSwitchColor {
-    color: ${color};
-    transition: color 0.5s ease-in-out;
-  }
+    <style>{`
+        .darkSwitchColor {
+          color: ${color};
+          transition: color 0.5s ease-in-out;
+        }
 
-  .glitch {
-    text-shadow: 2px 0 red, -2px 0 blue;
-    animation: glitch-effect 0.3s infinite alternate;
-  }
+        .glitch {
+          text-shadow: 2px 0 red, -2px 0 blue;
+          animation: glitch-effect 0.3s infinite alternate;
+        }
 
-  @keyframes glitch-effect {
-    0% {
-      transform: translateX(-2px);
-    }
-    100% {
-      transform: translateX(2px);
-    }
-  }
-  .visitBtn {
-    color: ${color2};
-    background-color: ${btnBack};
-  }
-
+        @keyframes glitch-effect {
+          0% {
+            transform: translateX(-2px);
+          }
+          100% {
+            transform: translateX(2px);
+          }
+        }
+        .visitBtn {
+          color: ${color2};
+          background-color: ${btnBack};
+        }
 `}</style>
       <SkillsUI skillsOpen={openSkills} setSkillsOpen={setOpenSkills} />
     </>
   );
-};
+}
 
 export default React.memo(Header)
