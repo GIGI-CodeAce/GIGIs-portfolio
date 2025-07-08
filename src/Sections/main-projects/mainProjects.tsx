@@ -16,7 +16,7 @@ export interface projectData {
 }
 
 function MyProjects() {
-    const [projects, setProjects] = useState<projectData[]>([]);
+    const [projects, setProjects] = useState<projectData[]>([])
 
     useEffect(() => {
         async function fetchProjects() {
@@ -43,14 +43,24 @@ function MyProjects() {
             </div>
 
             <div className='project darkSwitchColor'>
-                {projects.map((item) => (
-                    <div className='project-item project-item-main darkSwitchBack darkSwitchBorder' key={item.id}>
+                    {projects && projects.length > 0 ? (
+                    projects.map((item) => (
+                        <div
+                        className="project-item project-item-main darkSwitchBack darkSwitchBorder"
+                        key={item.id}
+                        >
                         <App {...item} />
+                        </div>
+                    ))
+                    ) : (
+                    <div className="loadingPlaceholderContainer">
+                        <h5>Loading...</h5>
                     </div>
-                ))}
+                    )}
+
             </div>
         </>
     );
 }
 
-export default MyProjects;
+export default MyProjects

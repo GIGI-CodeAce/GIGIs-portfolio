@@ -1,4 +1,4 @@
-<h1 align="center" id="title">GIGIs-portfolio  v1.4.6</h1>
+<h1 align="center" id="title">GIGIs-portfolio  v1.4.7</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">

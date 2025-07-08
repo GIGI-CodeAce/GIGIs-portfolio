@@ -199,6 +199,11 @@ width: 200px;
     background-color: hsl(0, 0%, 10%);
     padding: 1px;
 }
+
+.loadingPlaceholderContainer{
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 100%;
+}
 @media only screen and (max-width: 600px) {
     .project-item-main:nth-child(1),
     .project-item-main:nth-child(2)

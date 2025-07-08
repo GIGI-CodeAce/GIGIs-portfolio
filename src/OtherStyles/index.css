@@ -13,6 +13,15 @@ code {
     monospace;
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 ::selection {
   background: #ffffff;
   color: #000;

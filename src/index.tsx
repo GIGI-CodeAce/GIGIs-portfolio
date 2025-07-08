@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useRef, useEffect } from "react";
+
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header/header";
 import NavBar from "./Components/navBar/nav";
@@ -12,13 +13,41 @@ import "./OtherStyles/Mobile.css";
 const bgVidWebm = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.webm";
 const bgVidMp4 = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4";
 
-const VideoBackground: React.FC = () => (
-  <video className="video-background" preload="metadata" autoPlay loop muted playsInline>
-    <source src={bgVidWebm} type="video/webm" />
-    <source src={bgVidMp4} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-);
+const VideoBackground: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.load()
+    video.play().catch(() => {});
+
+    const interval = setInterval(() => {
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    }, 9000);
+
+    return () => clearInterval(interval);
+  }, [])
+
+  return (
+    <video
+      ref={videoRef}
+      className="video-background"
+      preload="auto"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src={bgVidWebm} type="video/webm" />
+      <source src={bgVidMp4} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+};
 
 interface AppProps {}
 const App: React.FC<AppProps> = () => {

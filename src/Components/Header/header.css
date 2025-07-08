@@ -38,7 +38,10 @@ main {
     font-size: 40px;
     margin: 40px 20px;
 }
+
 .video {
+    position: relative;
+  z-index: 10;
     width: 100%;
     max-width: 580px;
     min-width: 300px;
@@ -86,8 +89,22 @@ main {
   }
   
   .vidContainer {
+    position: relative;
     display: flex;
     justify-content: center;
+    z-index: 1;
+  }
+
+  .secretText {
+    position: absolute;
+    opacity: 60%;
+    top: 150px;
+    z-index: 0;
+  }
+
+  .refresh{
+    padding-top: 20px;
+    opacity: 50%;
   }
 
   .techContainer{

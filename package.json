@@ -1,7 +1,7 @@
 {
   "homepage": "https://www.gigicodeace.com",
-  "name": "web",
-  "version": "1.4.0",
+  "name": "portfolio",
+  "version": "1.4.7",
   "private": true,
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

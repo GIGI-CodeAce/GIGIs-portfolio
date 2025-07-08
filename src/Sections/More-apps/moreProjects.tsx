@@ -26,23 +26,27 @@ function MoreProjects() {
       fetchProjects();
   }, []);
 
-  return (
-    <>
-      <div className='projects--category darkSwitchBack darkSwitchBorder darkSwitchColor'>
-        <h2 id='more'>More apps</h2>
-      </div>
+return (
+  <>
+    <div className='projects--category darkSwitchBack darkSwitchBorder darkSwitchColor'>
+      <h2 id='more'>More apps</h2>
+    </div>
 
-      <div className='project darkSwitchColor'>
-        {projects.map((item) => (
-            <div className='project-item darkSwitchBack darkSwitchBorder' key={item.id}>
-              <App
-              {...item}
-              />
-            </div>
-        ))}
-      </div>
-    </>
-  );
+    <div className='project darkSwitchColor'>
+      {projects && projects.length > 0 ? (
+        projects.map((item) => (
+          <div className='project-item darkSwitchBack darkSwitchBorder' key={item.id}>
+            <App {...item} />
+          </div>
+        ))
+      ) : (
+          <div className="loadingPlaceholderContainer">
+            <h5>Also loading...</h5>
+          </div>
+      )}
+    </div>
+  </>
+);
 }
 
 

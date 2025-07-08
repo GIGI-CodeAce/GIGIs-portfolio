@@ -11,7 +11,7 @@ function Footer(){
         <>
         <footer>
             <div className="right-side">
-                <span><sub>v1.4.6</sub> Thanks for visit</span>
+                <span><sub>v1.4.7</sub> Thanks for visit</span>
             </div>
             <div className="left-side">
             <ul className="socials">

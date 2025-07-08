@@ -130,14 +130,21 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           </b><br />
 
 <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
-  {featuredTech.slice(0, visibleCount).map((tech) => (
-    <abbr key={tech.id} title={tech.alt} className="techContainer">
-      <a href={tech.link} target="_blank" className="Recources" rel="noreferrer">
-        <img src={tech.icon} alt={tech.alt} />
-      </a>
-    </abbr>
-  ))}
+  {featuredTech.length > 0 ? (
+    featuredTech.slice(0, visibleCount).map((tech) => (
+      <abbr key={tech.id} title={tech.alt} className="techContainer">
+        <a href={tech.link} target="_blank" className="Recources" rel="noreferrer">
+          <img src={tech.icon} alt={tech.alt} />
+        </a>
+      </abbr>
+    ))
+  ) : (
+   <span className="material-symbols-outlined refresh">
+    refresh
+  </span>
+  )}
 </div>
+
 
 
           <div className="skillInfo">
@@ -158,7 +165,8 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           src="https://www.youtube.com/embed/T3e0iaCirdI?mute=1"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          ></iframe>
+          >asdasd</iframe>
+          <div className="secretText">(~˘▾˘)~</div>
         </div>
       </div>
 
