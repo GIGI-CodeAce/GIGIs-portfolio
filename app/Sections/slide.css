@@ -1,0 +1,11 @@
+
+.slide-in-section {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0); 
+  }

@@ -1,95 +1,93 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import React, { useState, useRef, useEffect } from "react"
 
-export default function Home() {
+import Header from "./Components/Header/header";
+import NavBar from "./Components/navBar/nav";
+import MainProjects from "./Sections/main-projects/mainProjects";
+import MoreProjects from "./Sections/More-apps/moreProjects";
+import Welcome from "./Components/Welcome/welcome";
+import Footer from "./Components/Footer/footer";
+import "./OtherStyles/index.css";
+import "./OtherStyles/Mobile.css";
+
+const bgVidWebm = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.webm";
+const bgVidMp4 = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4";
+
+const VideoBackground: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return
+
+    video.load();
+    video.play().catch(() => {});
+
+    const interval = setInterval(() => {
+      if (video.paused) {
+        video.play().catch(() => {})
+      }
+    }, 9000);
+
+    return () => clearInterval(interval)
+  }, []);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <video
+      ref={videoRef}
+      className="video-background"
+      preload="auto"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src={bgVidWebm} type="video/webm" />
+      <source src={bgVidMp4} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+};
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+export default function HomePage() {
+  const [dontShowAgain, setDontShowAgain] = useState<boolean>(false)
+  const [bgSwitch, setBgSwitch] = useState<string>("on")
+
+  useEffect(() => {
+    const stored = localStorage.getItem("dontShow")
+    if (stored) {
+      setDontShowAgain(JSON.parse(stored))
+    }
+  }, []);
+
+  useEffect(() => {
+    const savedBgSwitch = localStorage.getItem("bgSwitch")
+    if (savedBgSwitch) {
+      setBgSwitch(savedBgSwitch)
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("dontShow", JSON.stringify(dontShowAgain))
+  }, [dontShowAgain])
+
+  const bgToggle = () => {
+    const newSwitchState = bgSwitch === "on" ? "off" : "on"
+    setBgSwitch(newSwitchState)
+    localStorage.setItem("bgSwitch", newSwitchState)
+  };
+
+  return (
+    <>
+      {bgSwitch === "on" && <VideoBackground />}
+      {!dontShowAgain && <Welcome setDontShowAgain={setDontShowAgain} />}
+      <div className="opacity">
+        <NavBar />
+        <Header bgToggle={bgToggle} bgSwitch={bgSwitch} />
+        <MainProjects />
+        <MoreProjects />
+        <Footer />
+      </div>
+    </>
   );
 }

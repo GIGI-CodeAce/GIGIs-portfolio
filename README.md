@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center" id="title">GIGIs-portfolio  v1.4.7</h1>
 
-## Getting Started
+<p align="center">
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">
+</p>
 
-First, run the development server:
+<p id="description" align="center">
+Welcome to my portfolio website! Here, you can find a showcase of my programming experience, featuring a diverse range of projects, including
+<strong>Bloggle</strong> - News & stories sharing,
+<strong>GIGIbuy</strong> - E-commerce App,
+<strong>clones, 2D games</strong>, and some more.
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2 align="center">Visit here</h2>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
+  <a href="https://gigicodeace.com">https://gigicodeace.com</a>
+</div>
+cd
+<h2 align="center">🧐 Features</h2>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h4>Here're some of the project's best features</h4>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Futuristic Design** – A sleek, dark theme with a snowfall storm effect for an immersive experience.  
+* **Interactive Elements** – Background toggle switch, embedded showcase video, and project previews.  
+* **Responsive & Device Previews** – Icons allow visitors to preview projects on different screen sizes.  
+* **Well-Organized Layout** – Sections for Introduction, Projects, and eCommerce showcase, making navigation intuitive.  
+* **Dynamic Project Data** – Projects are connected to an API, making updates and changes simple and efficient.
 
-## Learn More
+  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="90%"><hr/>
+  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="80%">
 
-To learn more about Next.js, take a look at the following resources:
+<br></br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![Portfolio](https://img.shields.io/badge/Portfolio-62b1ff?style=for-the-badge&logo=web&logoColor=white)](https://www.gigicodeace.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-3e3eff?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dobre-robert-03653b331/)
+[![GitHub](https://img.shields.io/badge/GitHub-2f2f2f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GIGI-CodeAce)
+[![CSS Battles](https://img.shields.io/badge/CSS%20Battles-ff6e96?style=for-the-badge&logo=css3&logoColor=white)](https://cssbattle.dev/player/gigi)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  <b></b>
+   <h4>~GIGI <code>Dore Robert</code></h4>
+</footer>

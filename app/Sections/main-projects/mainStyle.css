@@ -1,0 +1,225 @@
+.projects--category {
+    border: 5px solid white;
+    border-bottom-color: rgba(255, 255, 255, 0) ;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    backdrop-filter: blur(1px);
+
+    transition: height 0.3s ease;
+}
+.main{
+    border-top-color: rgba(255, 255, 255, 0);
+}
+.projects--category:hover{
+    border: 5px solid white;
+    border-style: dashed;
+
+}
+#myProjects{
+    border: 3px dotted white;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 50%;
+    width: 80%;
+    max-width: 500px;
+}
+.projectTitle {
+    text-align: center;
+    margin: 10px;
+}
+.imgContainer{
+    border: 1px solid black;
+    border-radius: 10px;
+    border-style: dashed;
+    padding: 5px 0px;
+}
+.projectImage {
+    width: 200px;
+    height: 210px ;
+    background-repeat: no-repeat;
+
+}
+.projectImage{
+    cursor: pointer;
+}
+.project {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.imgContainer{
+    border: 1px solid black;
+    border-radius: 10px;
+    border-style: dashed;
+    padding: 5px 0px;
+}
+
+.project-item {
+    flex: 1 1 calc(25% - 2000px);
+    padding: 10px;
+    min-width: 300px;
+    height: 400px;
+    border: 5px solid white;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+
+    transition: 
+    height 0.3s ease,
+    transform 0.3s ease,
+    border-radius 0.3s ease,
+    border-style 0.3s ease
+
+}
+.project-item-main:nth-child(1),
+.project-item-main:nth-child(2)
+{
+    min-width: 49%;
+}
+
+.project-item:hover{
+    border-style: dashed;
+    border-radius: 10px;
+}
+.project-item:hover .projectImage{
+    animation: rotate-img 0.5s ease;
+}
+.project-item:hover .visitBtn{
+    width: 200px;
+}
+.project-item:hover .description{
+    overflow-y: auto;
+    text-overflow: clip;
+}
+
+
+@keyframes rotate-img {
+    50% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.description {
+    font-size: 14px;
+    padding: 0px 10px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.2em;
+    min-height: 35px;
+    transition: max-height 0.3s ease;
+}
+.project-item-main:nth-child(1) .visitBtn,
+.project-item-main:nth-child(2) .visitBtn
+{
+width: 200px;
+}
+.project-item-main:nth-child(1) .imgContainer,
+.project-item-main:nth-child(2) .imgContainer{
+    border: 1px solid hsl(60, 100%, 80%);
+    border-style: dashed;
+}
+
+.visitBtn {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    border-radius: 5px;
+    border-style: groove;
+    font-size: 15px;
+    transition: 
+    width 0.3s ease, 
+    border-radius 0.3s ease, 
+    transform 0.3s ease, 
+    background-color 0.3s ease-in-out, 
+    color 0.1s ease
+}
+
+.visitBtn:hover {
+    cursor: pointer;
+    border-radius: 15px;
+    color: hsl(120, 100%, 30%);
+}
+
+.visitBtn:active {
+    border-style: dashed;
+    opacity: 0.5;
+}
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+}
+
+.phone {
+    background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/computer.png');
+    top: 10px; 
+    right: 5px; 
+}
+
+.computer {
+    background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/phone.png');
+    top: 45px; 
+    right: 5px; 
+}
+
+.git {
+    background: url('https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/others/github.png');
+    top: 10px; 
+    left: 5px; 
+}
+
+.phone, .computer, .git {
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: hsla(0, 0%, 20%, 0.481);
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.project-item-main:nth-child(1):hover .visitBtn,
+.project-item-main:nth-child(2):hover .visitBtn
+{
+    width: 250px;
+}
+
+.phone:hover, .computer:hover, .git:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 10%);
+    padding: 1px;
+}
+
+.loadingPlaceholderContainer{
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .project-item-main:nth-child(1),
+    .project-item-main:nth-child(2)
+    {
+        min-width: 300px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .project-item-main:nth-child(1):hover .visitBtn,
+    .project-item-main:nth-child(2):hover .visitBtn
+{
+    width: 200px;
+}
+.project-item-main:nth-child(1) .visitBtn,
+.project-item-main:nth-child(2) .visitBtn
+{
+width: 150px;
+}
+}

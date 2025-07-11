@@ -1,0 +1,131 @@
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20%); /* Start off the screen on the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Slide into place */
+    }
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    position: relative;
+    border: 5px solid white;
+    height: 200px;
+    
+    animation: fade 1s 1;
+    animation: slideLeft 0.3s ease-in-out;
+}
+
+@keyframes fade {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.container:hover {
+    border-style: dashed;
+}
+
+/* Image styles */
+.container img {
+    margin-top: 5px;
+    width: 200px;
+    height: 190px;
+    opacity: 0.5;
+    user-select: none;
+}
+
+/* Description styles */
+.container .desc {
+    margin-top: 20px;
+    position: absolute;
+    line-height: 1.4em;
+    left: 46%;
+    top: 50px;
+    transform: translateX(-40%);
+    width: 40%;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-shadow: 2px 1px 1px black;
+}
+.git2{
+    position: absolute;
+    left: 90%;
+    top: -55px;
+}
+.container .desc #img2 {
+    position: absolute;
+    transform: scaleX(-1);
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    z-index: 1;
+    opacity: 0.3;
+    user-select: none;
+}
+
+/* Title styles */
+.container #title {
+    position: absolute;
+    font-size: 20px;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+/* Next button styles */
+.container #next {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    border: 3px solid white;
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    opacity: 0.5;
+}
+
+.container #next:hover {
+    border-style: dashed;
+    cursor: pointer;
+}
+
+/* Responsive styling for small screens */
+@media (min-width: 301px) and (max-width: 600px) {
+    .git2{
+        left: 85%;
+        top: -55px;
+        width: 27px;
+        height: 27px;
+    }
+    .container .desc #img2 {
+        width: 70px;
+        height: 70px;
+    }
+    .container .desc {
+        left: 50%;
+        margin-top: 15px;
+        line-height: 1.1em;
+    }
+    .container img {
+        margin-top: 15px;
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Responsive styling for medium screens */
+@media (min-width: 301px) and (max-width: 900px) {
+    .container .desc {
+        left: 47%;
+    }
+}

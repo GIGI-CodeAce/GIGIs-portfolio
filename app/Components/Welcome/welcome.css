@@ -1,0 +1,58 @@
+
+.hello{
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  height: 90vh;         
+  transition: opacity 0.5s ease;
+  font-size: 30px;
+  line-height: 2vh;
+  z-index: 1002;
+
+  animation: shade 3s 1;
+}
+
+.hello h2{
+  text-align: center;
+  }
+
+  #continueMsg{
+    margin-top: 60px;
+    opacity: 0.5;
+    font-size: 20px;
+    
+    animation: shadeInf 2s infinite, shade 2s 1;
+    }
+
+  #dontShow{
+    text-decoration: underline;
+    padding-top: 15px;
+    font-size: 15px;
+    opacity: 0.250;
+    cursor: pointer;
+    width: 200px;height: 40px;
+    margin: auto;
+
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  #dontShow:hover{
+    opacity: 0.5;
+    text-shadow: 2px 1px 1px black;
+  }
+
+  .mainGreeting{
+    font-size: 60px;
+  }
+
+@keyframes shade{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+} 
+
+
+@keyframes shadeInf{
+0%{opacity: 0.8;}
+50%{opacity: 0.3;}
+100%{opacity: 0.8}
+}

@@ -1,0 +1,264 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+
+    font-family: Poppins;
+}
+h5{
+  text-align: center;
+}
+#me{
+  transition: color 0.5s ease-in-out;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+#welcomeMessage{
+    font-size: 40px;
+    margin: 40px 20px;
+}
+
+.video {
+    position: relative;
+  z-index: 10;
+    width: 100%;
+    max-width: 580px;
+    min-width: 300px;
+    min-height: 150px;
+    height: auto; 
+    aspect-ratio: 16 / 9;
+    margin: 20px 10px 20px 0px;
+    border-radius: 15px;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, 0);
+
+    transition: border 0.3s ease;
+}
+.video:hover{
+  border: 2px solid white;
+}
+.videoGlitch{
+  border: 2px solid hsla(241, 55%, 60%, 0.9);
+}
+.moreAbout {
+  display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    padding: 0px 0px 10px 0px;
+    border: 5px solid white;
+    border-top: none;
+  }
+  .moreAbout:hover{
+    border: 5px dashed white;
+    border-radius: 0px 0px 10px 10px;
+    border-top: none;
+  }
+  
+  .litteTalk, .vidContainer {
+    flex: 1;
+    width: 50%;
+  }
+  
+  .litteTalk {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    padding-right: 20px;
+  }
+  
+  .vidContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .secretText {
+    position: absolute;
+    opacity: 60%;
+    top: 150px;
+    z-index: 0;
+  }
+
+  .refresh{
+    padding-top: 20px;
+    opacity: 50%;
+  }
+
+  .techContainer{
+    height: 45px ;
+  }
+
+  .Recources img{
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+    animation: fadeOut 1s ease forwards;
+  }
+  .resume {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    border: 4px solid white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: rgba(245, 245, 245, 0.250);
+    padding: 10px 30px;
+    margin: 0 10px 0 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    transition: border-style 0.3s ease-in-out;
+  }
+  
+  .resume::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(55%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .resume:hover::before {
+    transform: translateX(0);
+  }
+  
+  .resume:hover {
+    border-style: dashed;
+  }
+  
+  .glitch-active .resume::before {
+    animation: slideSquare 1s linear infinite;
+  }
+  
+  @keyframes slideSquare {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .bg-slider {
+    position: relative;
+    background-color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0);
+    user-select: none;
+
+  }
+  .bg-slider:hover{
+    border-color: white;
+  }
+  .switch {
+    background-color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  .bg-slider .switch {
+    position: absolute;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid black;
+    transition: left 0.5s ease, background-color 0.3s ease;
+  }
+  .switch-blue{
+    background-color: #6361d1;
+  }
+  
+  
+  .bg-slider.on {
+    background-color: black;
+  }
+  
+  .bg-slider.on .switch {
+    left: 33px;
+  }
+  
+  .bg-slider.off .switch {
+    left: 2px;
+  }
+
+  .Recources {
+    filter: drop-shadow(1px 1px 30px hsl(0, 0%, 50%));
+  }
+  .Recources:hover{
+    filter: drop-shadow(1px 1px 30px hsl(0, 0%, 0%));
+  }  
+  .tech-icons{
+    margin-bottom:10px;
+    min-height: 62px;
+  }
+  .tech-icons img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .glitch-active img {
+    filter: grayscale(0%);
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+  
+  .glitch {
+    animation: glitch 0.2s infinite;
+  }
+
+  .special {
+    color:hsl(0, 0%, 60%);
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    animation: colorPulse 2s infinite alternate
+  }

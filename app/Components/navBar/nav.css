@@ -1,0 +1,64 @@
+nav{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  backdrop-filter: blur(2px);
+  border: 3px solid white;
+  width: 100%;
+}
+
+nav ul li{
+  text-align: center;
+  width: 115px;
+  border-left: 2px solid white;
+  height: 24px;
+  color: black;
+
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+nav ul li:hover{
+  cursor: pointer;
+  border: 2px solid black;
+  border-style: dashed;
+  border-radius: 5px;
+}
+nav ul li:active{
+  color: white;
+  border-color: white;
+
+  animation: active 0.3s forwards;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+nav ul a:first-child {
+  padding: 0 2px 0 0;
+  border-right: 1px solid white ;
+  margin-right: auto;
+}
+
+@keyframes active{
+  25%{border-color: white}
+  30%{color: white}
+  75%{border-color: black}
+  100%{color: black}
+}
+
+#gitHub-redirect{
+  color: white;
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  nav{
+    height: 30px;
+  }
+  nav ul li{
+    padding-top: 7px;
+  }
+}
