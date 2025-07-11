@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import SkillsUI from "../FullSkills/SkillsUI"
 import React from "react"
+import Image from "next/image";
 import supabase from "../../supabase-client"
 import "./header.css"
 
@@ -27,7 +28,7 @@ const getRandomItemFromArray = (array: string[]): string => {
 };
 
 const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
-  const [specialCharacters, setSpecialCharacters] = useState<string>(getRandomItemFromArray(specialArray))
+const [specialCharacters, setSpecialCharacters] = useState<string>("");
   const [glitch, setGlitch] = useState<boolean>(false)
   const [color, setColor] = useState<string>("white")
   const [color2, setColor2] = useState<string>("black")
@@ -36,6 +37,17 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
   const [openSkills, setOpenSkills] = useState<boolean>(false)
 
   const [featuredTech, setFeaturedTech] = useState<TechnologiesDataLayout[]>([])
+
+  useEffect(() => {
+  setSpecialCharacters(getRandomItemFromArray(specialArray));
+
+  const interval = setInterval(() => {
+    setSpecialCharacters(getRandomItemFromArray(specialArray));
+    setGlitch(Math.random() > 0.6);
+  }, 1500);
+
+  return () => clearInterval(interval);
+}, []);
 
   const handleClick = () => {
     setOpenSkills((prev) => !prev)
@@ -59,15 +71,6 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSpecialCharacters(getRandomItemFromArray(specialArray));
-      setGlitch(Math.random() > 0.6);
-    }, 1500);
-
-    return () => clearInterval(interval)
-  }, [])
-
-  useEffect(() => {
     const handleDblClick = () => {
       setColor("black")
       setColor2("white")
@@ -85,7 +88,6 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
     document.addEventListener("dblclick", handleDblClick);
     return () => document.removeEventListener("dblclick", handleDblClick)
   }, []);
-
 
         const [visibleCount, setVisibleCount] = useState(0);
 
@@ -116,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
           {specialCharacters && <span className="special"> {specialCharacters}</span>}
         </h1>
         <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
-        <div className={`switch ${glitch ? 'switch-blue' : ''}`}></div><br/>
+        <div className={`switch ${glitch ? 'switch-blue' : ''}`}></div><br/><br/>
           <h5>{bgSwitch === "on" ? "bg" : "no-bg"}</h5>
         </div>
       </header>
@@ -130,23 +132,21 @@ const Header: React.FC<HeaderProps> = ({ bgToggle, bgSwitch }) => {
             <span id="me" className="darkSwitchColor">Dobre Robert</span>
           </b><br />
 
-<div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
-  {featuredTech.length > 0 ? (
-    featuredTech.slice(0, visibleCount).map((tech) => (
-      <abbr key={tech.id} title={tech.alt} className="techContainer">
-        <a href={tech.link} target="_blank" className="Recources" rel="noreferrer">
-          <img src={tech.icon} alt={tech.alt} />
-        </a>
-      </abbr>
-    ))
-  ) : (
-   <span className="material-symbols-outlined refresh">
-    refresh
-  </span>
-  )}
-</div>
-
-
+          <div className={`tech-icons ${glitch ? "glitch-active" : ""}`}>
+            {featuredTech.length > 0 ? (
+              featuredTech.slice(0, visibleCount).map((tech) => (
+                <abbr key={tech.id} title={tech.alt} className="techContainer">
+                  <a href={tech.link} target="_blank" className="Recources" rel="noreferrer">
+                    <Image width={200} height={200} src={tech.icon} alt={tech.alt} />
+                  </a>
+                </abbr>
+              ))
+            ) : (
+            <span className="material-symbols-outlined refresh">
+              refresh
+            </span>
+            )}
+          </div>
 
           <div className="skillInfo">
             <a href="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/resume.pdf" download="resume.pdf">

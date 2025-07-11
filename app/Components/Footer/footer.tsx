@@ -1,5 +1,6 @@
 import './footer.css'
 import React from 'react'
+import Image from 'next/image'
 
 function Footer(){
 
@@ -17,13 +18,13 @@ function Footer(){
             <ul className="socials">
 
         <a href='https://www.linkedin.com/in/dobre-robert/' target='_blank'>
-        <li>LinkedIn <img className='redirect-icons' loading='lazy' src={linkedInIcon}/></li>
+        <li>LinkedIn <Image className='redirect-icons' width={20} height={20} loading='lazy' src={linkedInIcon} alt='LinkedIn icon'/></li>
         </a>
         <a href='https://github.com/GIGI-CodeAce' target='_blank'>
-        <li>Github <img className='redirect-icons' loading='lazy' src={githubIcon}/></li>
+        <li>Github <Image className='redirect-icons' width={20} height={20} loading='lazy' src={githubIcon} alt='Github icon'/></li>
         </a>
         <a href='https://mail.google.com/mail/?view=cm&fs=1&to=gigicodeace@gmail.com&su=Inquiry&body=Hello,' target='_blank'>
-        <li>Gmail <img className='redirect-icons' loading='lazy' src={gmailIcon}/></li>
+        <li>Gmail <Image className='redirect-icons' width={20} height={20} loading='lazy' src={gmailIcon} alt='Gmail icon'/></li>
         </a>
     </ul>
             </div>

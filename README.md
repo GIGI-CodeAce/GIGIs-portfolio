@@ -1,4 +1,4 @@
-<h1 align="center" id="title">GIGIs-portfolio  v1.4.7</h1>
+<h1 align="center" id="title">GIGIs-portfolio  NEXTver1.0.1</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">
@@ -16,7 +16,7 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
 <div align="center">
   <a href="https://gigicodeace.com">https://gigicodeace.com</a>
 </div>
-cd
+
 <h2 align="center">🧐 Features</h2>
 
 <h4>Here're some of the project's best features</h4>
@@ -27,8 +27,8 @@ cd
 * **Well-Organized Layout** – Sections for Introduction, Projects, and eCommerce showcase, making navigation intuitive.  
 * **Dynamic Project Data** – Projects are connected to an API, making updates and changes simple and efficient.
 
-  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="90%"><hr/>
-  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="80%">
+  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="630"><hr/>
+  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="600">
 
 <br></br>
 

@@ -1,11 +1,11 @@
 @keyframes slideLeft {
     0% {
         opacity: 0;
-        transform: translateX(20%); /* Start off the screen on the right */
+        transform: translateX(20%);
     }
     100% {
         opacity: 1;
-        transform: translateX(0); /* Slide into place */
+        transform: translateX(0);
     }
 }
 
@@ -30,7 +30,6 @@
     border-style: dashed;
 }
 
-/* Image styles */
 .container img {
     margin-top: 5px;
     width: 200px;
@@ -89,6 +88,7 @@
     height: 100%;
     border: 3px solid white;
     font-size: 20px;
+    padding: 7px;
     color: white;
     background: rgba(255, 255, 255, 0);
     opacity: 0.5;

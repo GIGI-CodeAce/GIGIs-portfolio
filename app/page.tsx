@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect } from "react";
 
 import Header from "./Components/Header/header";
 import NavBar from "./Components/navBar/nav";
@@ -10,18 +10,20 @@ import Footer from "./Components/Footer/footer";
 import "./OtherStyles/index.css";
 import "./OtherStyles/Mobile.css";
 
-const bgVidWebm = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.webm";
-const bgVidMp4 = "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4";
+const bgVidWebm =
+  "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.webm"
+const bgVidMp4 =
+  "https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/backgrounds/webBg-vmake.mp4"
 
 const VideoBackground: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return
+    if (!video) return;
 
-    video.load();
-    video.play().catch(() => {});
+    video.load()
+    video.play().catch(() => {})
 
     const interval = setInterval(() => {
       if (video.paused) {
@@ -50,32 +52,42 @@ const VideoBackground: React.FC = () => {
 };
 
 export default function HomePage() {
-  const [dontShowAgain, setDontShowAgain] = useState<boolean>(false)
-  const [bgSwitch, setBgSwitch] = useState<string>("on")
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const stored = localStorage.getItem("dontShow")
-    if (stored) {
-      setDontShowAgain(JSON.parse(stored))
+  const [dontShowAgain, setDontShowAgain] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("dontShow");
+      return stored ? JSON.parse(stored) : false;
     }
-  }, []);
+    return false;
+  });
 
-  useEffect(() => {
-    const savedBgSwitch = localStorage.getItem("bgSwitch")
-    if (savedBgSwitch) {
-      setBgSwitch(savedBgSwitch)
+  const [bgSwitch, setBgSwitch] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("bgSwitch") || "on";
     }
-  }, []);
+    return "on";
+  });
 
   useEffect(() => {
-    localStorage.setItem("dontShow", JSON.stringify(dontShowAgain))
-  }, [dontShowAgain])
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem("dontShow", JSON.stringify(dontShowAgain))
+    }
+  }, [dontShowAgain, mounted])
 
   const bgToggle = () => {
     const newSwitchState = bgSwitch === "on" ? "off" : "on"
     setBgSwitch(newSwitchState)
-    localStorage.setItem("bgSwitch", newSwitchState)
+    if (mounted) {
+      localStorage.setItem("bgSwitch", newSwitchState)
+    }
   };
+
+  if (!mounted) return null
 
   return (
     <>
