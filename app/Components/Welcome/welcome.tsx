@@ -13,12 +13,12 @@ interface Greeting {
 
 function Welcome({ setDontShowAgain }: WelcomeProps) {
   const [dblClick, setDblClick] = useState(false)
-  const [helloTrigger, setHelloTrigger] = useState(true);
-  const [displaySite, setDisplaySite] = useState<string>("none");
-  const [siteOpacity, setSiteOpacity] = useState<string>("0");
-  const [animateHello, setAnimateHello] = useState<boolean>(false);
-  const [animateOpacity, setAnimateOpacity] = useState<boolean>(false);
-  const [greeting, setGreeting] = useState<Greeting>({ hi: "Welcome", flag: "🇬🇧" });
+  const [helloTrigger, setHelloTrigger] = useState(true)
+  const [displaySite, setDisplaySite] = useState<string>("none")
+  const [siteOpacity, setSiteOpacity] = useState<string>("0")
+  const [animateHello, setAnimateHello] = useState<boolean>(false)
+  const [animateOpacity, setAnimateOpacity] = useState<boolean>(false)
+  const [greeting, setGreeting] = useState<Greeting>({ hi: "Welcome", flag: "🇬🇧" })
 
   const greetings = {
     en: { morning: "Good morning", afternoon: "Good afternoon", evening: "Good evening", flag: "🇬🇧" },
@@ -105,10 +105,11 @@ function getLocalizedGreeting(langCode: string): Greeting {
       {helloTrigger && (
         <div onClick={handleContinue} className={`hello ${animateHello ? "shadeIn" : ""}`}>
           <div>
-            {greeting && <h2 className="mainGreeting">
+            {greeting && 
+            <h2 className="mainGreeting">
               {greeting.hi} <sup>{greeting.flag}</sup>
             </h2>}
-            <h2>👋</h2>
+            <h2 className="greetEmoji">👋</h2>
             <h2 id="continueMsg">Click anywhere to continue</h2>
             <div>
             {!dblClick &&  <h2 onClick={(e) => {e.stopPropagation(); setDblClick(true);}} id="dontShow">Don't show this again</h2>}
@@ -144,4 +145,4 @@ function getLocalizedGreeting(langCode: string): Greeting {
   );
 }
 
-export default Welcome;
+export default Welcome

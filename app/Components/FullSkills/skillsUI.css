@@ -45,7 +45,7 @@
 
 .skills-title {
     font-size: 1.8rem;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid white;
@@ -64,11 +64,12 @@
 .category-title {
     font-size: 1.3rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     border-left: 4px solid white;
     background-color: rgba(255, 255, 255, 0.07);
     border-radius: 0px 0px 10px 0px;
     padding-left: 10px;
+    padding: 3px;
 }
 
 .skills-list {
@@ -77,7 +78,7 @@
     gap: 10px;
     justify-items: center;
     width: 100%;
-    padding: 0;
+    padding: 10px;
 }
 
 .skill-item {
@@ -89,7 +90,7 @@
 
     width: 90%;
     max-width: 250px;
-    min-width: 100px;
+    min-width: 200px;
 
     background: rgba(255, 255, 255, 0.2);
     padding: 10px 15px;
@@ -117,10 +118,10 @@
 
 #exit {
     position: fixed;
-    left: 93%;
-    top: 3%;
+    left: 92%;
+    top: 2.5%;
     
-    padding: 6px 10px 6px 10px;
+    padding: 8px 12px 8px 12px;
     float: right;
     margin-right: 5px;
     border-radius: 50%;
@@ -132,7 +133,7 @@
     transition: color 0.3s ease;
 }
 #exit:hover {
-    color: white;
+    color: black;
     border-style: dotted;
 }
 
@@ -162,7 +163,7 @@
     }
 
     #exit {
-        left: 90%;
+        left: 89%;
     }
 }
 

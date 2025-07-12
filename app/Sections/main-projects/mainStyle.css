@@ -130,11 +130,13 @@ width: 200px;
 
 .visitBtn {
     position: absolute;
+    background-color: white;
     top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 150px;
     border-radius: 5px;
+    border: 1px solid black;
     border-style: groove;
     font-size: 15px;
     transition: 
@@ -197,7 +199,7 @@ width: 200px;
 .phone:hover, .computer:hover, .git:hover {
     cursor: pointer;
     background-color: hsl(0, 0%, 10%);
-    padding: 1px;
+    padding: 10px;
 }
 
 .loadingPlaceholderContainer{

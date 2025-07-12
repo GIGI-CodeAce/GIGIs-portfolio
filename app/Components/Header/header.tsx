@@ -82,7 +82,7 @@ const [specialCharacters, setSpecialCharacters] = useState<string>("");
         setColor2("black")
         setBackColor("hsla(0, 0%, 100%, 0.2)")
         setBtnBack("white")
-      }, 500);
+      }, 300);
     };
 
     document.addEventListener("dblclick", handleDblClick);
@@ -174,7 +174,7 @@ const [specialCharacters, setSpecialCharacters] = useState<string>("");
     <style>{`
         .darkSwitchColor {
           color: ${color};
-          transition: color 0.5s ease-in-out;
+          transition: color 0.3s ease;
         }
 
         .glitch {
