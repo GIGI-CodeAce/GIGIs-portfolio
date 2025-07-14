@@ -1,4 +1,4 @@
-<h1 align="center" id="title">GIGIs-portfolio  v1.4.7</h1>
+<h1 align="center" id="title">GIGIs-portfolio  REACTver1.4.7</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" alt="project-image">
@@ -16,7 +16,6 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
 <div align="center">
   <a href="https://gigicodeace.com">https://gigicodeace.com</a>
 </div>
-cd
 <h2 align="center">🧐 Features</h2>
 
 <h4>Here're some of the project's best features</h4>
@@ -27,8 +26,41 @@ cd
 * **Well-Organized Layout** – Sections for Introduction, Projects, and eCommerce showcase, making navigation intuitive.  
 * **Dynamic Project Data** – Projects are connected to an API, making updates and changes simple and efficient.
 
-  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="90%"><hr/>
-  <img align="center" src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="80%">
+<h2 align="center">Languages and tools used</h2>
+<p align="center">
+  </a>
+  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+            alt="html5" width="40" height="40" />
+  </a>
+    <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+      <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png" 
+            alt="tailwind" width="40" height="40" />
+  </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" 
+            alt="javascript" width="40" height="40" />
+  </a>
+    <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" 
+            alt="typescript" width="40" height="40"/>
+  </a>
+    <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" 
+            alt="react" width="40" height="40" />
+  </a>
+        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+      <img src="  https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Tools/IPinfo.png" 
+            alt="react" width="40" height="40" />
+  </a>
+</a></p>
+
+<div align="center">
+<h2>Project screenshots</h2>
+
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="650"><hr/>
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="600">
+</div>
 
 <br></br>
 
