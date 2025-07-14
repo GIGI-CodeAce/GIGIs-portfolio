@@ -1,8 +1,8 @@
 <h1 align="center" id="title">GIGIs-portfolio  NEXTver1.4.8</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWebNew.svg" 
-   width="50%" height="300" alt="project-image">
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" 
+   width="40%" height="310" alt="project-image">
 </p>
 
 <p id="description" align="center">
