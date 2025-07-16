@@ -59,9 +59,7 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
       <img src="  https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Tools/IPinfo.png" 
             alt="react" width="40" height="40" />
   </a>
-
-</a>
-</p>
+</a></p>
 
 <div align="center">
 <h2>Project screenshots</h2>
