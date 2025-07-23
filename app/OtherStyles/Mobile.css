@@ -126,8 +126,12 @@ u {
     body .projects--category h2{
         padding: 20px 0px 20px 0px;
     }
-    body ul li {
+    body ul li{
         font-size: 13px;
+        width: 84px;
+    }
+    body .gmail{
+        font-size: 11px;
         width: 84px;
     }
 
@@ -181,9 +185,9 @@ u {
     #me {
         font-size: 20px;
     }
-        .mainGreeting{
-          font-size: 40px;
-          }
+    .mainGreeting{
+        font-size: 40px;
+    }
     .hello h2:first-child{
     font-size: 40px;
     }

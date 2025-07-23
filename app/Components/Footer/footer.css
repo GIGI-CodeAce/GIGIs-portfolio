@@ -15,11 +15,16 @@ footer ul {
     padding: 0;
     margin: 0;
 }
-.right-side {
-    display: flex;
+.center-side,.left-side,.right-side {
+    width: 50%;
+    text-align: center;
+    display: table-column;
     align-items: center;
 }
-.right-side:hover{
+.right-side{
+  text-align: right;
+}
+.center-side:hover{
   text-decoration: underline dotted;
 }
 
@@ -33,6 +38,25 @@ a {
   .redirect-icons{
     width: 20px;
   }
+  .gmail{
+    font-size: 14.5px;
+  }
+.left-side {
+  display: none;
+  justify-content: left;
+  height: 50px;
+}
+
+  @media (min-width: 999px) and (max-width: 9999px) {
+  .left-side{
+    display: flex;
+  }
+}
+
+.site-logo {
+  width: 30px;
+  height: 30px;
+}
 footer li {
     display: inline;
     width: 70px;
