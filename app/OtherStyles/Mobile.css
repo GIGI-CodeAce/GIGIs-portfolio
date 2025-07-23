@@ -134,6 +134,9 @@ u {
         font-size: 11px;
         width: 84px;
     }
+    body .left-side2, .right-side2{
+        font-size: 14px;
+    }
 
     body .video-background {
         object-fit: cover;

@@ -1,4 +1,4 @@
-<h1 align="center" id="title">GIGIs-portfolio  NEXTver1.4.8</h1>
+<h1 align="center" id="title">GIGIs-portfolio  NEXTver1.4.9</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" 
@@ -33,31 +33,31 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
   </a>
   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-            alt="html5" width="40" height="40" />
+            alt="HTML5" width="40" height="40" />
   </a>
     <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/css3-original.png" 
-            alt="tailwind" width="40" height="40" />
+            alt="Tailwind" width="40" height="40" />
   </a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" 
-            alt="javascript" width="40" height="40" />
+            alt="Javascript" width="40" height="40" />
   </a>
     <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" 
-            alt="typescript" width="40" height="40"/>
+            alt="Typescript" width="40" height="40"/>
   </a>
     <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" 
-            alt="react" width="40" height="40" />
+            alt="React" width="40" height="40" />
   </a>
       <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/nextjs-white-icon.png" 
-            alt="react" width="40" height="40" />
+            alt="Next.js" width="40" height="40" />
   </a>
         <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-      <img src="  https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Tools/IPinfo.png" 
-            alt="react" width="40" height="40" />
+      <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Tools/IPinfo.png" 
+            alt="IPinfo" width="40" height="40" />
   </a>
 </a></p>
 

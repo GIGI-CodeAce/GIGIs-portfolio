@@ -24,6 +24,9 @@ footer ul {
 .right-side{
   text-align: right;
 }
+.center-side{
+  padding-top: 7px;
+}
 .center-side:hover{
   text-decoration: underline dotted;
 }
@@ -68,6 +71,30 @@ footer li:hover{
 }
 sub{
   font-weight: 600;
+}
+
+.layer2 {
+  display: flex;
+  justify-content:space-around;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    border-top: 2px solid black;
+    border-style: dashed;
+
+  margin-top: 1px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+.left-side2, .right-side2{
+  opacity: 0.7;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.right-side2{
+  user-select: none;
+  cursor: pointer;
 }
 
 .socials a:nth-child(1) {

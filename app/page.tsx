@@ -29,7 +29,7 @@ const VideoBackground: React.FC = () => {
       if (video.paused) {
         video.play().catch(() => {})
       }
-    }, 9000);
+    }, 5000);
 
     return () => clearInterval(interval)
   }, []);
@@ -98,7 +98,7 @@ export default function HomePage() {
         <Header bgToggle={bgToggle} bgSwitch={bgSwitch} />
         <MainProjects />
         <MoreProjects />
-        <Footer />
+        <Footer dontShowAgain={dontShowAgain} setDontShowAgain={setDontShowAgain}/>
       </div>
     </>
   );
