@@ -21,9 +21,6 @@ footer ul {
     display: table-column;
     align-items: center;
 }
-.right-side{
-  text-align: right;
-}
 .center-side{
   padding-top: 7px;
 }
@@ -54,6 +51,9 @@ a {
   .left-side{
     display: flex;
   }
+  .right-side{
+  text-align: right;
+}
 }
 
 .site-logo {
@@ -85,6 +85,7 @@ sub{
   margin-top: 1px;
   padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid white;
   text-align: center;
 }
 .left-side2, .right-side2{
@@ -95,6 +96,13 @@ sub{
 .right-side2{
   user-select: none;
   cursor: pointer;
+  animation: color 1s 1;
+}
+.right-side2:hover{
+  text-shadow: 2px 1px 1px black;
+}
+.right-side2:active{
+  color: black;
 }
 
 .socials a:nth-child(1) {

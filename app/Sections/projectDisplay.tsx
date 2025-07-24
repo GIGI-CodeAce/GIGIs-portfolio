@@ -71,10 +71,10 @@ function App(props: AppProps) {
                 <div className='imgContainer'>
                     {!isOnMobile ? (
                         <a href={props.link}>
-                            <Image className='projectImage' height={210} width={210} loading="lazy" src={props.img} alt="Project" />
+                            <Image className='projectImage' height={210} width={210} loading="lazy" src={props.img} alt="Project" unoptimized/>
                         </a>
                     ) : (
-                        <Image className='projectImage' height={210} width={210} loading="lazy" src={props.img} alt="Project" />
+                        <Image className='projectImage' height={210} width={210} loading="lazy" src={props.img} alt="Project" unoptimized/>
                     )}
                     {props.mobile && <abbr title="Mobile support"><div className="computer"></div></abbr>}
                     <abbr title="Computer support"><div className="phone"></div></abbr>

@@ -92,4 +92,4 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
   );
 }
 
-export default SkillsUI;
+export default SkillsUI

@@ -137,7 +137,7 @@ const [specialCharacters, setSpecialCharacters] = useState<string>("");
               featuredTech.slice(0, visibleCount).map((tech) => (
                 <abbr key={tech.id} title={tech.alt} className="techContainer">
                   <a href={tech.link} target="_blank" className="Recources" rel="noreferrer">
-                    <Image width={200} height={200} src={tech.icon} alt={tech.alt} />
+                    <Image width={200} height={200} src={tech.icon} alt={tech.alt} unoptimized/>
                   </a>
                 </abbr>
               ))

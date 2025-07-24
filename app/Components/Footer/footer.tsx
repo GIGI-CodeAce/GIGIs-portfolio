@@ -26,7 +26,7 @@ function Footer({dontShowAgain, setDontShowAgain}: introValues){
             <div className='left-side'>
                 <Image className='site-logo' width={20} height={20} loading='lazy' 
                 src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWebNew.svg" 
-                alt='Icon'/>
+                alt='Icon' unoptimized/>
             </div>
             <div className="center-side">
                 <span>Thanks for visit</span>
@@ -35,10 +35,10 @@ function Footer({dontShowAgain, setDontShowAgain}: introValues){
              <div className="right-side">
         <ul className="socials">
             <a href='https://www.linkedin.com/in/dobre-robert/' target='_blank'>
-                <li>LinkedIn <Image className='redirect-icons' width={20} height={20} loading='lazy' src={linkedInIcon} alt='LinkedIn icon'/></li>
+                <li>LinkedIn <Image className='redirect-icons' width={20} height={20} loading='lazy' src={linkedInIcon} alt='LinkedIn icon' unoptimized/></li>
             </a>
             <a href='https://github.com/GIGI-CodeAce' target='_blank'>
-                <li>Github <Image className='redirect-icons' width={20} height={20} loading='lazy' src={githubIcon} alt='Github icon'/></li>
+                <li>Github <Image className='redirect-icons' width={20} height={20} loading='lazy' src={githubIcon} alt='Github icon' unoptimized/></li>
             </a>
         </ul>
             <div>
