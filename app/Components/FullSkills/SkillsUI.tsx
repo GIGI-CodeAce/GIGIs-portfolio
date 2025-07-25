@@ -7,6 +7,7 @@ interface Skill {
   id: number;
   name: string;
   amount: number;
+  levelExp: string;
   timeUnit: 'Month' | 'Year';
 }
 
@@ -57,9 +58,9 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
 
   const getSkillLevel = (skill: Skill) => {
     const months = skill.timeUnit === 'Year' ? skill.amount * 12 : skill.amount;
-    if (months < 6) return 'skill-beginner';
-    if (months < 24) return 'skill-intermediate';
-    if (months < 60) return 'skill-advanced';
+    if (skill.levelExp == 'Begginer') return 'skill-beginner';
+    if (skill.levelExp == 'Intermediate') return 'skill-intermediate';
+    if (skill.levelExp == 'Advanced') return 'skill-advanced';
     return 'skill-expert';
   };
 
@@ -76,12 +77,15 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
               <h3 className="category-title">{category}</h3>
               <ul className="skills-list">
                 {skills.map((skill) => (
-                  <li key={skill.id} className={`skill-item ${getSkillLevel(skill)}`}>
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-experience">
-                      {skill.amount}+ {skill.timeUnit}{skill.amount !== 1 ? 's' : ''}
-                    </span>
-                  </li>
+                <li key={skill.id} className={`skill-item ${getSkillLevel(skill)}`}>
+                  <span className="skill-name">{skill.name}</span>
+                  <span className="skill-experience">{skill.levelExp}</span>
+                  
+                  <div className="skill-tooltip">
+                    <span className='monthsTotal'>{skill.amount}+ {skill.timeUnit}{skill.amount !== 1 ? 's' : ''}</span>
+                    <span className='aprox-text'>Aproximated*</span>
+                  </div>
+                </li>
                 ))}
               </ul>
             </div>
