@@ -205,6 +205,7 @@ width: 200px;
 .loadingPlaceholderContainer{
         background-color: rgba(255, 255, 255, 0.2);
         width: 100%;
+        padding: 30px 0px;
 }
 @media only screen and (max-width: 600px) {
     .project-item-main:nth-child(1),

@@ -181,6 +181,7 @@ main {
   
   .bg-slider {
     position: relative;
+    margin-right: 7px;
     background-color: white;
     width: 60px;
     height: 30px;
@@ -190,6 +191,9 @@ main {
     border: 1px solid rgba(255, 255, 255, 0);
     user-select: none;
 
+  }
+  #faded-bgStatus{
+    opacity: 0.6;
   }
   .bg-slider:hover{
     border-color: white;

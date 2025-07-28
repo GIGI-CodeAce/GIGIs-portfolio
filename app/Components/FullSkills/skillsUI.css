@@ -180,7 +180,9 @@
     left: 92%;
     top: 2.5%;
     
-    padding: 8px 12px 8px 12px;
+    /* padding: 8px 12px 8px 12px; */
+    height: 35px;
+    width: 36px;
     float: right;
     margin-right: 5px;
     border-radius: 50%;

@@ -12,6 +12,27 @@ body {
   border: 1px solid red;
 } */
 
+/* * {
+  font-family: 'Quicksand Dashed', sans-serif !important;
+} */
+
+
+@font-face {
+  font-family: 'QuicksandDash-Regular'; /* Must match the internal name exactly */
+  src: url('../dashedFonts/quicksand.dash.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dashed-text {
+  letter-spacing: 2px;
+  font-size: 21px;
+  text-shadow: -2px 1px 1px black,
+                2px 1px 1px black;
+  font-family: 'QuicksandDash-Regular', sans-serif;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

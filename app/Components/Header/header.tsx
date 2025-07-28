@@ -19,8 +19,9 @@ interface TechnologiesDataLayout{
 }
 
 const specialArray: string[] = ["!", "!!", "?", "??", "", "Umm", 
-                                "Friend", "Innovator","Visitor", "Developer", "Passionate",
-                                 "User", "Traveler","Creator","Explorer","Dreamer"]
+      "Friend", "Innovator", "Visitor", "Developer", "Passionate","User", "Traveler",
+       "Creator", "Explorer", "Dreamer","Thinker", "Seeker", "Builder"];
+
 
 const getRandomItemFromArray = (array: string[]): string => {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -119,7 +120,7 @@ const [specialCharacters, setSpecialCharacters] = useState<string>("");
         </h1>
         <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
         <div className={`switch ${glitch ? 'switch-blue' : ''}`}></div><br/><br/>
-          <h5>{bgSwitch === "on" ? "bg" : "no-bg"}</h5>
+          <h5 id="faded-bgStatus">{bgSwitch === "on" ? "bg" : "no-bg"}</h5>
         </div>
       </header>
 
