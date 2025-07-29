@@ -14,8 +14,15 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
 <h2 align="center">Visit here</h2>
 
 <div align="center">
-  <a href="https://gigicodeace.com">https://gigicodeace.com</a>
+  <a href="https://gigi-codeace.github.io/GIGIs-portfolio/">gigi-codeace.github.io/GIGIs-portfolio</a>
 </div>
+
+<hr />
+
+<h5 align="center">
+  <u>Note:</u> This is an outdated react based version of the current portfolio project, and will remain at v1.4.7 as only the new next.js version of the application will continue recieving updates as the newer stable version
+</h5>
+
 <h2 align="center">🧐 Features</h2>
 
 <h4>Here're some of the project's best features</h4>
