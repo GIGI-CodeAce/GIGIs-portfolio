@@ -1,8 +1,8 @@
 <h1 align="center" id="title">GIGIs-portfolio  NEXTver1.4.9</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWeb.ico" 
-   width="40%" height="310" alt="project-image">
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWebNew.png" 
+       width="40%" alt="project-image">
 </p>
 
 <p id="description" align="center">
@@ -65,7 +65,7 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
 <h2>Project screenshots</h2>
 
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/pageOverview.png" alt="project-screenshot" width="100%" height="650"><hr/>
-  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skills.png" alt="project-screenshot" width="90%" height="600">
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/skillsNew.png" alt="project-screenshot" width="90%" height="600">
 </div>
 
 <br></br>
