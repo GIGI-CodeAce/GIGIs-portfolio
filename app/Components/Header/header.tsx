@@ -119,7 +119,7 @@ const [specialCharacters, setSpecialCharacters] = useState<string>("");
           {specialCharacters && <span className="special"> {specialCharacters}</span>}
         </h1>
         <div onClick={bgToggle} className={`bg-slider ${bgSwitch}`}>
-        <div className={`switch ${glitch ? 'switch-blue' : ''}`}></div><br/><br/>
+        <div className={`switch ${glitch ? 'switch-blue' : ''}`}></div>
           <h5 id="faded-bgStatus">{bgSwitch === "on" ? "bg" : "no-bg"}</h5>
         </div>
       </header>
@@ -167,7 +167,7 @@ const [specialCharacters, setSpecialCharacters] = useState<string>("");
           src="https://www.youtube.com/embed/T3e0iaCirdI?mute=1"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          >asdasd</iframe>
+          ></iframe>
           <div className="secretText">(~˘▾˘)~</div>
         </div>
       </div>

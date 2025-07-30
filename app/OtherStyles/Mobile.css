@@ -152,6 +152,24 @@ u {
         text-align: center;
         margin: 40px 0;
     }
+
+    body .bg-slider .switch {
+    top: 2px;
+    height: 21px;
+    width: 21px;
+        }
+    body .bg-slider {
+    margin-right: 7px;
+    width: 52px;
+    height: 27px;
+  } 
+  body .bg-slider.on .switch {
+    left: 28px;
+  }
+  
+  body .bg-slider.off .switch {
+    left: 4px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
