@@ -1,7 +1,7 @@
 <h1 align="center" id="title">GIGIs-portfolio  NEXTver1.4.9</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/mainWebNew.png" 
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/portfolioPFP.png" 
        width="40%" alt="project-image">
 </p>
 

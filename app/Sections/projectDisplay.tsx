@@ -82,7 +82,7 @@ function App(props: AppProps) {
                         <abbr title="Github repo"><div className="git"></div></abbr>
                     </a>
                 </div>
-                <h3 className='projectTitle dashed-text'>{props.title}</h3>
+                <h3 className='projectTitle lexend-text'>{props.title}</h3>
                 <div className='description-container'>
                     <p className='description'>{props.desc}</p>
                 </div>
