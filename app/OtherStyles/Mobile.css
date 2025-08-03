@@ -128,7 +128,11 @@ u {
     }
     body .bg-slider{
     margin-right: 0px;
-  }
+    }
+    body .hello{
+    height: 93vh;
+    padding-bottom: 50px;
+    }
     body ul li{
         padding-top: 4px;
         font-size: 13px;

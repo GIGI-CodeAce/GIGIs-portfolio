@@ -12,11 +12,6 @@ body {
   border: 1px solid red;
 } */
 
-/* * {
-  font-family: 'Quicksand Dashed', sans-serif !important;
-} */
-
-
 @font-face {
   font-family: 'Lexend'; /* Must match the internal name exactly */
   src: url('../dashedFonts/Lexend-Bold.ttf') format('opentype');

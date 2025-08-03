@@ -263,6 +263,7 @@ main {
 
   .special {
     color:hsl(0, 0%, 60%);
+    filter: drop-shadow(1px 1px 30px hsl(0, 0%, 0%));
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: colorPulse 2s infinite alternate
