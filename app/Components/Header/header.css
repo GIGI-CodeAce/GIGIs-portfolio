@@ -183,7 +183,7 @@ main {
   .bg-slider {
     position: relative;
     margin-right: 7px;
-    background-color: white;
+    background-color: white !important;
     width: 60px;
     height: 30px;
     border-radius: 60px;
@@ -198,10 +198,10 @@ main {
     opacity: 0.6;
   }
   .bg-slider:hover{
-    border-color: white;
+    border-color: white !important;
   }
   .switch {
-    background-color: white;
+    background-color: white !important;
     transition: color 0.3s ease, background-color 0.3s ease;
   }
   .bg-slider .switch {
@@ -218,7 +218,7 @@ main {
   }
   
   .bg-slider.on {
-    background-color: black;
+    background-color: black !important;
   }
   
   .bg-slider.on .switch {
@@ -263,7 +263,7 @@ main {
 
   .special {
     color:hsl(0, 0%, 60%);
-    filter: drop-shadow(1px 1px 30px hsl(0, 0%, 0%));
+    filter: drop-shadow(0px 0px 30px hsl(0, 0%, 55%));
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: colorPulse 2s infinite alternate

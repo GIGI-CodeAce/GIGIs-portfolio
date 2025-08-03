@@ -26,6 +26,23 @@ body {
 }
 
 
+/* diables mobile blue filter when active */
+@media (min-width: 301px) and (max-width: 600px) {
+button, a, div:not(.warning-buttons *) {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background-color: transparent;
+}
+
+button:active, a:active, div:active {
+  background-color: transparent;
+  color: inherit; 
+}
+}
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

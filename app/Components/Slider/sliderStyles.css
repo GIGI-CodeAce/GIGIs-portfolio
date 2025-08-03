@@ -90,10 +90,11 @@
 
 /* Title styles */
 .container #title {
+    font-family: 'Lexend', sans-serif;
     position: absolute;
     font-size: 20px;
     left: 50%;
-    top: 10px;
+    top: 20px;
     transform: translateX(-50%);
 }
 
@@ -102,16 +103,19 @@
     position: absolute;
     right: 0px;
     height: 100%;
-    border: 3px solid white;
+    border: none;
+    border-left: 3px solid white;
     font-size: 20px;
-    padding: 7px;
+    padding: 7px 10px;
     color: white;
     background: rgba(255, 255, 255, 0);
+      text-shadow: -1px 1px 1px black,
+                    1px 1px 1px black;
     opacity: 0.5;
 }
 
 .container #next:hover {
-    border-style: dashed;
+    border-left-style: dashed;
     cursor: pointer;
 }
 

@@ -1,0 +1,173 @@
+{
+  "en": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening",
+    "flag": "🇬🇧",
+    "continue": "Click anywhere to continue",
+    "skip": "Don't show this again",
+    "agreeing": "Are you sure?"
+  },
+  "us": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening",
+    "flag": "🇺🇸",
+    "continue": "Click anywhere to continue",
+    "skip": "Don't show this again",
+    "agreeing": "Are you sure?"
+  },
+  "gb": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening",
+    "flag": "🇬🇧",
+    "continue": "Click anywhere to continue",
+    "skip": "Don't show this again",
+    "agreeing": "Are you sure?"
+  },
+  "fr": {
+    "morning": "Bonjour",
+    "afternoon": "Bon après‑midi",
+    "evening": "Bonsoir",
+    "flag": "🇫🇷",
+    "continue": "Cliquez n’importe où pour continuer",
+    "skip": "Ne plus afficher cela",
+    "agreeing": "Êtes‑vous sûr ?"
+  },
+  "it": {
+    "morning": "Buongiorno",
+    "afternoon": "Buon pomeriggio",
+    "evening": "Buonasera",
+    "flag": "🇮🇹",
+    "continue": "Tocca ovunque per continuare",
+    "skip": "Non mostrare più questo",
+    "agreeing": "Sei sicuro?"
+  },
+  "ro": {
+    "morning": "Bună dimineața",
+    "afternoon": "Bună ziua",
+    "evening": "Bună seara",
+    "flag": "🇷🇴",
+    "continue": "Apasă oriunde pentru a continua",
+    "skip": "Nu mai arăta asta",
+    "agreeing": "Ești sigur?"
+  },
+  "es": {
+    "morning": "Buenos días",
+    "afternoon": "Buenas tardes",
+    "evening": "Buenas noches",
+    "flag": "🇪🇸",
+    "continue": "Haz clic en cualquier parte para continuar",
+    "skip": "No volver a mostrar esto",
+    "agreeing": "¿Estás seguro?"
+  },
+  "de": {
+    "morning": "Guten Morgen",
+    "afternoon": "Guten Tag",
+    "evening": "Guten Abend",
+    "flag": "🇩🇪",
+    "continue": "Klicke irgendwo, um fortzufahren",
+    "skip": "Nicht mehr anzeigen",
+    "agreeing": "Bist du sicher?"
+  },
+  "pt": {
+    "morning": "Bom dia",
+    "afternoon": "Boa tarde",
+    "evening": "Boa noite",
+    "flag": "🇵🇹",
+    "continue": "Clique em qualquer lugar para continuar",
+    "skip": "Não mostrar isto novamente",
+    "agreeing": "Tem certeza?"
+  },
+  "jp": {
+    "morning": "おはようございます",
+    "afternoon": "こんにちは",
+    "evening": "こんばんは",
+    "flag": "🇯🇵",
+    "continue": "どこをクリックしても続行します",
+    "skip": "これを二度と表示しない",
+    "agreeing": "よろしいですか？"
+  },
+  "ja": {
+    "morning": "おはようございます",
+    "afternoon": "こんにちは",
+    "evening": "こんばんは",
+    "flag": "🇯🇵",
+    "continue": "どこをクリックしても続行します",
+    "skip": "これを二度と表示しない",
+    "agreeing": "よろしいですか？"
+  },
+  "cn": {
+    "morning": "早上好",
+    "afternoon": "下午好",
+    "evening": "晚上好",
+    "flag": "🇨🇳",
+    "continue": "点击任意处继续",
+    "skip": "不再显示此内容",
+    "agreeing": "你确定吗？"
+  },
+  "zh": {
+    "morning": "早上好",
+    "afternoon": "下午好",
+    "evening": "晚上好",
+    "flag": "🇨🇳",
+    "continue": "点击任意处继续",
+    "skip": "不再显示此内容",
+    "agreeing": "你确定吗？"
+  },
+  "kr": {
+    "morning": "좋은 아침",
+    "afternoon": "좋은 오후",
+    "evening": "좋은 저녁",
+    "flag": "🇰🇷",
+    "continue": "아무 곳이나 클릭하면 계속 진행됩니다",
+    "skip": "다시 표시하지 않기",
+    "agreeing": "확실하신가요?"
+  },
+  "ko": {
+    "morning": "좋은 아침",
+    "afternoon": "좋은 오후",
+    "evening": "좋은 저녁",
+    "flag": "🇰🇷",
+    "continue": "아무 곳이나 클릭하면 계속 진행됩니다",
+    "skip": "다시 표시하지 않기",
+    "agreeing": "확실하신가요?"
+  },
+  "ru": {
+    "morning": "Доброе утро",
+    "afternoon": "Добрый день",
+    "evening": "Добрый вечер",
+    "flag": "🇷🇺",
+    "continue": "Нажмите в любом месте, чтобы продолжить",
+    "skip": "Больше не показывать это",
+    "agreeing": "Вы уверены?"
+  },
+  "ar": {
+    "morning": "صباح الخير",
+    "afternoon": "مساء الخير",
+    "evening": "تصبح على خير",
+    "flag": "🇸🇦",
+    "continue": "انقر في أي مكان للمتابعة",
+    "skip": "لا تُظهر هذا مرة أخرى",
+    "agreeing": "هل أنت متأكد؟"
+  },
+    "nl": {
+    "morning": "Goedemorgen",
+    "afternoon": "Goedemiddag",
+    "evening": "Goedenavond",
+    "flag": "🇳🇱",
+    "continue": "Klik ergens om door te gaan",
+    "skip": "Niet meer tonen",
+    "agreeing": "Weet je het zeker?"
+  },
+  "sg": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening",
+    "flag": "🇸🇬",
+    "continue": "Click anywhere to continue",
+    "skip": "Don't show this again",
+    "agreeing": "Are you sure?"
+  }
+}

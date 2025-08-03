@@ -1,4 +1,4 @@
-<h1 align="center" id="title">GIGIs-portfolio  NEXTver1.4.9</h1>
+<h1 align="center" id="title">GIGIs-portfolio  NEXTver1.5.0</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/refs/heads/main/AppImages/others/portfolioPFP.png" 

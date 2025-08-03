@@ -221,20 +221,27 @@ width: 200px;
     border-radius: 10px;
     transition: background-color 0.3s ease-in-out;
 }
+.phone:hover, .computer:hover, .git:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 20%);
+    transform: scale(1.05);
+}
 .project-item-main:nth-child(1):hover .visitBtn,
 .project-item-main:nth-child(2):hover .visitBtn
 {
     width: 250px;
 }
 
-.phone:hover, .computer:hover, .git:hover {
-    cursor: pointer;
-    background-color: hsl(0, 0%, 10%);
-    padding: 10px;
-}
-
 .loadingPlaceholderContainer{
-        background-color: rgba(255, 255, 255, 0.2);
+      background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.20)
+    );
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(1px);
         width: 100%;
         padding: 30px 0px;
 }

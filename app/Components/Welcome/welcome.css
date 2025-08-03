@@ -3,7 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;   
-  height: 90vh;         
+  text-align: center;
+  height: 99vh;
+  padding-bottom: 60px;
   transition: opacity 0.5s ease;
   font-size: 30px;
   line-height: 2vh;
@@ -18,36 +20,77 @@
 
   #continueMsg{
     margin-top: 60px;
-    opacity: 0.5;
+    opacity: 0.8;
     font-size: 20px;
+    filter: drop-shadow(1px 1px 20px hsl(0, 0%, 99%));
     
-    animation: shadeInf 2s infinite, shade 2s 1;
+    animation: shade 2s 1 forwards, shadeInf 2s 2s infinite;
     }
 
-  #dontShow{
-    text-decoration: underline;
-    padding-top: 30px;
-    font-size: 15px;
-    opacity: 0.250;
-    cursor: pointer;
-    width: 200px;height: 40px;
+#dontShow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 15px;
+  opacity: 0.25;
+  cursor: pointer;
+  color: white;
+    height: 5vh !important;
+    width: 250px;
     margin: auto;
+    margin-top: 20px;
+    padding-top: 10px;
 
-    transition: color 0.3s ease, opacity 0.3s ease;
-  }
+  transition: color 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(1px 1px 15px hsl(0, 0%, 69%));
+}
 
-  #dontShow:hover{
-    opacity: 0.5;
-    text-shadow: 2px 1px 1px black;
-  }
+#dontShow:hover {
+  opacity: 0.5;
+  text-shadow: 2px 1px 1px black;
+}
 
-  .mainGreeting{
+.dontShowContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin:  10px 10px;
+  width: 88%;
+  margin: auto;
+  height: 25px !important;
+  color: black;
+}
+
+  .mainGreeting,.mainGreetingUnloaded{
     font-size: 60px;
+    transition:opacity 0.5s ease;
+    filter: drop-shadow(1px 1px 20px hsl(0, 0%, 60%));
+  }
+  .mainGreetingUnloaded{
+    opacity: 0.3;
   }
 
-.greetEmoji{
+.greetEmoji {
+  display: inline-block;
   font-size: 40px;
   margin-top: 50px;
+  animation: wave 4s ease-in-out infinite;
+  filter: drop-shadow(1px 1px 30px hsl(0, 0%, 90%));
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
 }
 
 @keyframes shade{

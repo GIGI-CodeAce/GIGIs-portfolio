@@ -22,7 +22,8 @@ function App(props: AppProps) {
                     <button onClick={onClose} id="exit-settings">X</button>
                     <p>Oh, wait!</p>
                     <p>You appear to be on a small device.</p>
-                    <p>The website you are trying to access does not meet the recommended requirements for similar mobile devices. As a result, some UI elements and controls may not work as intended.</p>
+                    <p id="mobileWariningAbout">This website may not meet the recommended requirements for some mobile devices,
+                                         which could affect the functionality of certain UI elements.</p>
                     <div className="warning-buttons">
                         <button className='mobileBackBtn' onClick={onClose}>Go back</button>
                         <button className='mobileVisitBtn' onClick={() => window.open(props.link, '_blank')}>Visit anyway</button>

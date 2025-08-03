@@ -21,6 +21,13 @@ main {
     font-size: 18px;
 }
 
+#mobileWariningAbout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px !important;
+}
+
 .popup-container p,
 .popup-container h1,
 .popup-container div {
@@ -98,15 +105,17 @@ u {
 
 #exit-settings {
     position: fixed;
-    left: 86%;
-    top: 4%;
+    left: 85%;
+    top: 2.8%;
     
-    padding: 6px 10px 6px 10px;
+    /* padding: 8px 12px 8px 12px; */
+    height: 34px;
+    width: 35px;
     float: right;
     margin-right: 5px;
     border-radius: 50%;
-    color: black;
     border: 2px solid black;
+    color: black;
     border-style: dashed;
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -115,10 +124,7 @@ u {
 }
 #exit-settings:hover {
     color: white;
-}
-
-#exit-settings:active {
-    background-color: hsl(0, 0%, 69%);
+    border-style: dotted;
 }
 
 /* Responsive Design */
