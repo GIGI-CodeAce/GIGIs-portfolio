@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "./Components/Header/header";
 import NavBar from "./Components/navBar/nav";
@@ -7,61 +7,51 @@ import MainProjects from "./Sections/main-projects/mainProjects";
 import MoreProjects from "./Sections/More-apps/moreProjects";
 import Welcome from "./Components/Welcome/welcome";
 import Footer from "./Components/Footer/footer";
+import VideoBackground from "./videoBackground";
 import "./OtherStyles/index.css";
 import "./OtherStyles/Mobile.css";
 
-const VideoBackground: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.load()
-    video.play().catch(() => {})
-
-    const interval = setInterval(() => {
-      if (video.paused) {
-        video.play().catch(() => {})
-      }
-    }, 5000);
-
-    return () => clearInterval(interval)
-  }, []);
-
-  return (
-    <video
-      ref={videoRef}
-      className="video-background"
-      preload="auto"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source src="/webBg.webm" type="video/webm" />
-      Your browser does not support the video tag.
-    </video>
-  );
-};
 
 export default function HomePage() {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false)
 
   const [dontShowAgain, setDontShowAgain] = useState<boolean>(() => {
     if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("dontShow");
-      return stored ? JSON.parse(stored) : false;
+      const stored = localStorage.getItem("dontShow")
+      return stored ? JSON.parse(stored) : false
     }
-    return false;
+    return false
   });
 
   const [bgSwitch, setBgSwitch] = useState<string>(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("bgSwitch") || "on";
+      return localStorage.getItem("bgSwitch") || "on"
     }
-    return "on";
+    return "on"
   });
+
+useEffect(() => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    const key = e.key.toLowerCase()
+
+    if (e.ctrlKey && key === 'x') {
+      e.preventDefault()
+      bgToggle()
+    }
+
+    if (e.ctrlKey && key === 'z') {
+      e.preventDefault()
+      setDontShowAgain((old)=> !old)
+    }
+  };
+
+  window.addEventListener('keydown', handleKeyDown)
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown)
+  };
+}, [bgSwitch, dontShowAgain, mounted])
+
+
 
   useEffect(() => {
     setMounted(true)

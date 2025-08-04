@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import Image from "next/image";
+import './warningPopup.css'
 import '../OtherStyles/Mobile.css';
 
 interface AppProps {

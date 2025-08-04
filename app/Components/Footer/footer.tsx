@@ -1,7 +1,6 @@
 import './footer.css'
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-// import dontShowAgain
 
 interface introValues{
     dontShowAgain: boolean

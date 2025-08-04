@@ -44,12 +44,12 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
       data?.forEach((skill) => {
         const category = Object.entries(skillGroups).find(([, names]) =>
           names.includes(skill.name)
-        )?.[0] || 'Tools & Frameworks';
+        )?.[0] || 'Tools & Frameworks'
       
-        grouped[category].push(skill);
+        grouped[category].push(skill)
       });
       
-      setSkillsData(grouped);
+      setSkillsData(grouped)
       
     }
 
@@ -72,6 +72,7 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
         <button id="exit" onClick={() => setSkillsOpen(false)}>X</button>
         <h2 className="skills-title">My Skills & Experience</h2>
         <div className="skills-wrapper">
+
           {Object.entries(skillsData).map(([category, skills]) => (
             <div key={category} className="skills-category">
               <h3 className="category-title">{category}</h3>
@@ -90,6 +91,7 @@ function SkillsUI({ skillsOpen, setSkillsOpen }: SkillsUIProps) {
               </ul>
             </div>
           ))}
+          
         </div>
       </div>
     </div>

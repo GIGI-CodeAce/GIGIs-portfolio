@@ -15,7 +15,7 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
 <h2 align="center">Visit here</h2>
 
 <div align="center">
-  <a href="https://gigicodeace.com">https://gigicodeace.com</a>
+  <a href="https://gigicodeace.com">gigicodeace.com</a>
 </div>
 
 <h2 align="center">🧐 Features</h2>
@@ -49,13 +49,13 @@ Welcome to my portfolio website! Here, you can find a showcase of my programming
   </a>
     <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" 
-            alt="React" width="40" height="40" />
+            alt="React.js" width="40" height="40" />
   </a>
       <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Languages/Colored/nextjs-white-icon.png" 
             alt="Next.js" width="40" height="40" />
   </a>
-        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+        <a href="https://ipinfo.io/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/Tools/IPinfo.png" 
             alt="IPinfo" width="40" height="40" />
   </a>

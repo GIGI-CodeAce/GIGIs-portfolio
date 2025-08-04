@@ -5,10 +5,7 @@
     box-sizing: border-box;
 
     background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.05)
-    );
+      135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)) !important;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     backdrop-filter: blur(2px);
@@ -46,7 +43,7 @@
     height: 110%;
     width: 110%;
 
-    background-color: hsla(0, 0%, 0%, 0.5);
+    background-color: hsla(0, 0%, 0%, 0.5) !important;
     z-index: 1001;
 }
 
@@ -71,9 +68,11 @@
 .category-title {
     font-size: 1.3rem;
     font-weight: bold;
-    margin-bottom: 10px;
     border-left: 4px solid white;
     background-color: rgba(255, 255, 255, 0.07);
+    min-width: 220px;
+    margin: auto;
+    margin-bottom: 10px;
     border-radius: 5px 0px 10px 0px;
     padding-left: 10px;
     padding: 3px;
@@ -194,7 +193,6 @@
     left: 92%;
     top: 2.5%;
     
-    /* padding: 8px 12px 8px 12px; */
     height: 35px;
     width: 36px;
     float: right;
@@ -233,8 +231,11 @@
     }
 
     .skills-container {
-        width: 95vw;
+        width: 90vw;
         height: 85vh;
+    }
+    .skills-title{
+      font-size: 22px !important;
     }
 
     #exit {
